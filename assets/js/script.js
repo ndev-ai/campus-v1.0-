@@ -2,9 +2,12 @@
 const gradientOrb = document.getElementById('gradientOrb');
 const nav = document.getElementById('nav');
 const heroStats = document.getElementById('heroStats');
+const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+const navLinks = document.getElementById('navLinks');
 
 // State
 let countersVisible = false;
+let mobileMenuOpen = false;
 
 // Initialize
 document.addEventListener('DOMContentLoaded', function() {
@@ -19,6 +22,30 @@ function setupEventListeners() {
 
     // Mouse move for gradient orb
     window.addEventListener('mousemove', handleMouseMove);
+
+    // Mobile menu toggle
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+    }
+
+    // Close mobile menu when clicking on a link
+    if (navLinks) {
+        const links = navLinks.querySelectorAll('.nav-link');
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                if (mobileMenuOpen) {
+                    toggleMobileMenu();
+                }
+            });
+        });
+    }
+}
+
+// Toggle mobile menu
+function toggleMobileMenu() {
+    mobileMenuOpen = !mobileMenuOpen;
+    mobileMenuToggle.classList.toggle('active');
+    navLinks.classList.toggle('mobile-menu-open');
 }
 
 // Handle scroll
