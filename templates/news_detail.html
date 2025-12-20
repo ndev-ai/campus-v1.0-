@@ -1,10 +1,104 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
 
-</body>
-</html>
+{% block title %}{{ news.title }} - Green Campus Initiative{% endblock %}
+
+{% block content %}
+<!-- News Detail Section -->
+<section class="about-section" style="padding-top: 120px;">
+    <div class="section-content">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <!-- Back Link -->
+            <a href="{% url 'news:list' %}" style="display: inline-flex; align-items: center; gap: 8px; color: #84cc16; text-decoration: none; margin-bottom: 30px; font-size: 14px; transition: opacity 0.3s;">
+                <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5"/>
+                    <path d="m12 19-7-7 7-7"/>
+                </svg>
+                Back to News
+            </a>
+
+            <!-- Category Badge -->
+            <div style="margin-bottom: 20px;">
+                <span class="news-badge" style="display: inline-block;">{{ news.get_category_display }}</span>
+            </div>
+
+            <!-- Title -->
+            <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: 42px; font-weight: 700; color: white; margin-bottom: 20px; line-height: 1.2;">
+                {{ news.title }}
+            </h1>
+
+            <!-- Meta Info -->
+            <div class="news-meta" style="margin-bottom: 40px;">
+                <span class="news-date">{{ news.created_at|date:"F d, Y" }}</span>
+                <span class="news-dot">•</span>
+                <span class="news-read">{{ news.read_time }} min read</span>
+            </div>
+
+            <!-- Featured Image -->
+            {% if news.image %}
+            <div style="margin-bottom: 40px; border-radius: 16px; overflow: hidden; border: 1px solid rgba(132, 204, 22, 0.2);">
+                <img src="{{ news.image.url }}" alt="{{ news.title }}" style="width: 100%; height: auto; display: block;">
+            </div>
+            {% endif %}
+
+            <!-- Excerpt -->
+            <div style="padding: 30px; background: rgba(132, 204, 22, 0.05); border-left: 4px solid #84cc16; border-radius: 8px; margin-bottom: 40px;">
+                <p style="font-size: 18px; color: rgba(255, 255, 255, 0.9); line-height: 1.7; margin: 0; font-weight: 500;">
+                    {{ news.excerpt }}
+                </p>
+            </div>
+
+            <!-- Content -->
+            <div style="color: rgba(255, 255, 255, 0.8); font-size: 16px; line-height: 1.8; margin-bottom: 60px;">
+                {{ news.content|linebreaks }}
+            </div>
+
+            <!-- Share Section -->
+            <div style="padding: 30px; background: rgba(132, 204, 22, 0.05); border-radius: 12px; text-align: center;">
+                <h3 style="color: white; font-size: 20px; margin-bottom: 20px;">Share this article</h3>
+                <div style="display: flex; gap: 12px; justify-content: center;">
+                    <a href="https://facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank" rel="noopener noreferrer" style="background: rgba(132, 204, 22, 0.1); border: 1px solid rgba(132, 204, 22, 0.2); border-radius: 8px; padding: 12px; display: flex; align-items: center; justify-content: center; transition: all 0.3s; text-decoration: none;">
+                        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ news.title }}" target="_blank" rel="noopener noreferrer" style="background: rgba(132, 204, 22, 0.1); border: 1px solid rgba(132, 204, 22, 0.2); border-radius: 8px; padding: 12px; display: flex; align-items: center; justify-content: center; transition: all 0.3s; text-decoration: none;">
+                        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}&title={{ news.title }}" target="_blank" rel="noopener noreferrer" style="background: rgba(132, 204, 22, 0.1); border: 1px solid rgba(132, 204, 22, 0.2); border-radius: 8px; padding: 12px; display: flex; align-items: center; justify-content: center; transition: all 0.3s; text-decoration: none;">
+                        <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect width="4" height="12" x="2" y="9"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="cta-glow"></div>
+    <div class="cta-content">
+        <svg class="icon cta-heart" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+        </svg>
+        <h2 class="cta-title">Ready to Make Your Campus Green?</h2>
+        <p class="cta-text">Join the movement for a sustainable future. Together we can do more!</p>
+        <div class="cta-buttons">
+            <button class="cta-primary-btn">
+                <span>Become a Partner</span>
+                <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"/>
+                    <path d="m12 5 7 7-7 7"/>
+                </svg>
+            </button>
+            <button class="cta-secondary-btn">Become a Volunteer</button>
+        </div>
+    </div>
+</section>
+{% endblock %}
