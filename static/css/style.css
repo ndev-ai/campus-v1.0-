@@ -762,8 +762,8 @@ body {
 }
 
 .program-icon-wrap {
-    width: 140px;
-    height: 140px;
+    width: 100%;
+    height: 220px;
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -779,19 +779,14 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 20px;
 }
 
 .program-card:hover .program-icon-wrap {
-    background-color: #84cc16;
+    transform: scale(1.05);
 }
 
 .program-card:hover .program-icon-wrap svg {
     stroke: #fff;
-}
-
-.program-card:hover .program-icon-img {
-    transform: scale(1.05);
 }
 
 .program-title {
