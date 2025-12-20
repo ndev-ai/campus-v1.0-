@@ -1,10 +1,129 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
 
-</body>
-</html>
+{% block title %}{{ program.title }} - Green Campus Initiative{% endblock %}
+
+{% block content %}
+<!-- Program Detail Section -->
+<section class="about-section" style="padding-top: 120px;">
+    <div class="section-content">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <!-- Back Link -->
+            <a href="{% url 'programs:list' %}" style="display: inline-flex; align-items: center; gap: 8px; color: #84cc16; text-decoration: none; margin-bottom: 30px; font-size: 14px; transition: opacity 0.3s;">
+                <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5"/>
+                    <path d="m12 19-7-7 7-7"/>
+                </svg>
+                Back to Programs
+            </a>
+
+            <!-- Title -->
+            <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: 48px; font-weight: 700; color: white; margin-bottom: 30px; line-height: 1.2;">
+                {{ program.title }}
+            </h1>
+
+            <!-- Meta Info -->
+            <div style="display: flex; gap: 30px; margin-bottom: 40px; flex-wrap: wrap;">
+                {% if program.duration %}
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    <span style="color: rgba(255, 255, 255, 0.8); font-size: 15px;">{{ program.duration }}</span>
+                </div>
+                {% endif %}
+                {% if program.participants %}
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                    <span style="color: rgba(255, 255, 255, 0.8); font-size: 15px;">{{ program.participants }} Participants</span>
+                </div>
+                {% endif %}
+            </div>
+
+            <!-- Featured Image -->
+            {% if program.image %}
+            <div style="margin-bottom: 50px; border-radius: 16px; overflow: hidden; border: 1px solid rgba(132, 204, 22, 0.2);">
+                <img src="{{ program.image.url }}" alt="{{ program.title }}" style="width: 100%; height: auto; display: block;">
+            </div>
+            {% endif %}
+
+            <!-- Overview -->
+            <div style="margin-bottom: 50px;">
+                <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 600; color: white; margin-bottom: 20px;">
+                    Overview
+                </h2>
+                <div style="color: rgba(255, 255, 255, 0.8); font-size: 17px; line-height: 1.8;">
+                    {{ program.overview|linebreaks }}
+                </div>
+            </div>
+
+            <!-- Objectives -->
+            <div style="margin-bottom: 50px;">
+                <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 600; color: white; margin-bottom: 20px;">
+                    Objectives
+                </h2>
+                <div style="padding: 30px; background: rgba(132, 204, 22, 0.05); border-left: 4px solid #84cc16; border-radius: 8px;">
+                    <div style="color: rgba(255, 255, 255, 0.9); font-size: 16px; line-height: 1.8;">
+                        {{ program.objectives|linebreaks }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Impact -->
+            {% if program.impact %}
+            <div style="margin-bottom: 50px;">
+                <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 600; color: white; margin-bottom: 20px;">
+                    Impact
+                </h2>
+                <div style="padding: 40px; background: linear-gradient(135deg, rgba(132, 204, 22, 0.1) 0%, rgba(132, 204, 22, 0.05) 100%); border-radius: 12px; border: 1px solid rgba(132, 204, 22, 0.2);">
+                    <div style="color: rgba(255, 255, 255, 0.9); font-size: 16px; line-height: 1.8;">
+                        {{ program.impact|linebreaks }}
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Join Program CTA -->
+            <div style="padding: 40px; background: rgba(132, 204, 22, 0.05); border-radius: 12px; text-align: center; margin-top: 60px;">
+                <h3 style="color: white; font-size: 24px; margin-bottom: 15px; font-family: 'Space Grotesk', sans-serif;">Interested in This Program?</h3>
+                <p style="color: rgba(255, 255, 255, 0.7); margin-bottom: 25px; font-size: 16px;">Join us in making campuses more sustainable and environmentally friendly.</p>
+                <button class="primary-btn" style="margin: 0 auto;">
+                    <span>Get Involved</span>
+                    <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14"/>
+                        <path d="m12 5 7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="cta-glow"></div>
+    <div class="cta-content">
+        <svg class="icon cta-heart" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+        </svg>
+        <h2 class="cta-title">Ready to Make Your Campus Green?</h2>
+        <p class="cta-text">Join the movement for a sustainable future. Together we can do more!</p>
+        <div class="cta-buttons">
+            <button class="cta-primary-btn">
+                <span>Become a Partner</span>
+                <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"/>
+                    <path d="m12 5 7 7-7 7"/>
+                </svg>
+            </button>
+            <button class="cta-secondary-btn">Become a Volunteer</button>
+        </div>
+    </div>
+</section>
+{% endblock %}
