@@ -1,10 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
 
-</body>
-</html>
+{% block title %}Our Programs - Green Campus Initiative{% endblock %}
+
+{% block content %}
+<!-- Programs Section -->
+<section class="programs-section" id="programs">
+    <div class="section-content">
+        <div class="programs-header">
+            <span class="section-tag">Our Programs</span>
+            <h2 class="section-title">A Comprehensive Approach to Campus Ecology</h2>
+            <p class="section-subtitle">Key directions that transform universities into sustainable development centers</p>
+        </div>
+        <div class="programs-grid">
+            {% for program in programs %}
+            <div class="program-card">
+                <div class="program-icon-wrap">
+                    {% if program.icon %}
+                        <img src="{{ program.icon.url }}" alt="{{ program.title }}" class="program-icon-img">
+                    {% elif program.image %}
+                        <img src="{{ program.image.url }}" alt="{{ program.title }}" class="program-icon-img">
+                    {% else %}
+                        <img src="{% static 'img/volunteer.jpg' %}" alt="{{ program.title }}" class="program-icon-img">
+                    {% endif %}
+                </div>
+                <h3 class="program-title">{{ program.title }}</h3>
+                <p class="program-desc">{{ program.description }}</p>
+                <a href="{% url 'programs:detail' program.slug %}" class="program-link">
+                    Learn More
+                    <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14"/>
+                        <path d="m12 5 7 7-7 7"/>
+                    </svg>
+                </a>
+                <div class="program-glow"></div>
+            </div>
+            {% empty %}
+            <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px;">
+                <p style="color: rgba(255, 255, 255, 0.6); font-size: 18px;">No programs available at the moment.</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="cta-glow"></div>
+    <div class="cta-content">
+        <svg class="icon cta-heart" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+        </svg>
+        <h2 class="cta-title">Ready to Make Your Campus Green?</h2>
+        <p class="cta-text">Join the movement for a sustainable future. Together we can do more!</p>
+        <div class="cta-buttons">
+            <button class="cta-primary-btn">
+                <span>Become a Partner</span>
+                <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"/>
+                    <path d="m12 5 7 7-7 7"/>
+                </svg>
+            </button>
+            <button class="cta-secondary-btn">Become a Volunteer</button>
+        </div>
+    </div>
+</section>
+{% endblock %}
