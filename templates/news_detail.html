@@ -22,17 +22,28 @@
                 {{ news.title }}
             </h1>
 
-            <!-- Meta Info with Category -->
-            <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 40px;">
-                <span class="news-badge" style="display: inline-block;">{{ news.get_category_display }}</span>
-                <span class="news-dot" style="color: rgba(26, 26, 26, 0.3);">•</span>
-                <span class="news-date">{{ news.created_at|date:"F d, Y" }}</span>
+            <!-- Date -->
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 40px;">
+                <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span style="color: #4a4a4a; font-size: 15px;">{{ news.created_at|date:"F d, Y" }}</span>
             </div>
 
             <!-- Featured Image -->
             {% if news.image %}
-            <div style="margin-bottom: 40px; border-radius: 16px; overflow: hidden; border: 1px solid rgba(132, 204, 22, 0.2);">
+            <div style="margin-bottom: 30px; border-radius: 16px; overflow: hidden; border: 1px solid rgba(132, 204, 22, 0.2); position: relative;">
                 <img src="{{ news.image.url }}" alt="{{ news.title }}" style="width: 100%; height: auto; display: block;">
+                <!-- Category Badge on Image -->
+                <div style="position: absolute; top: 16px; right: 16px;">
+                    <span class="news-badge" style="backdrop-filter: blur(8px); background: rgba(132, 204, 22, 0.95);">{{ news.get_category_display }}</span>
+                </div>
+            </div>
+            {% else %}
+            <!-- Category Badge without image -->
+            <div style="margin-bottom: 30px;">
+                <span class="news-badge">{{ news.get_category_display }}</span>
             </div>
             {% endif %}
 
