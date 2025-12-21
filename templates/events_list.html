@@ -17,7 +17,7 @@
             {% for event in events %}
             <div class="event-card">
                 <div class="event-date">
-                    <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 4px;">
+                    <svg class="icon icon-mb" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
                         <line x1="16" x2="16" y1="2" y2="6"/>
                         <line x1="8" x2="8" y1="2" y2="6"/>
@@ -45,8 +45,8 @@
                 </button>
             </div>
             {% empty %}
-            <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px;">
-                <p style="color: rgba(255, 255, 255, 0.6); font-size: 18px;">No events scheduled at the moment.</p>
+            <div class="empty-state">
+                <p class="empty-state-text">No events scheduled at the moment.</p>
             </div>
             {% endfor %}
         </div>

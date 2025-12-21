@@ -7,9 +7,9 @@
 <!-- News Detail Section -->
 <section class="about-section" style="padding-top: 120px;">
     <div class="section-content">
-        <div style="max-width: 900px; margin: 0 auto;">
+        <div class="detail-container">
             <!-- Back Link -->
-            <a href="{% url 'news:list' %}" style="display: inline-flex; align-items: center; gap: 8px; color: #84cc16; text-decoration: none; margin-bottom: 30px; font-size: 14px; transition: opacity 0.3s;">
+            <a href="{% url 'news:list' %}" class="back-link">
                 <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M19 12H5"/>
                     <path d="m12 19-7-7 7-7"/>
@@ -18,23 +18,23 @@
             </a>
 
             <!-- Title -->
-            <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: 42px; font-weight: 700; color: #1a1a1a; margin-bottom: 20px; line-height: 1.2;">
+            <h1 class="detail-title-large">
                 {{ news.title }}
             </h1>
 
             <!-- Date -->
-            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 40px;">
+            <div class="detail-meta">
                 <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="12" cy="12" r="10"/>
                     <polyline points="12 6 12 12 16 14"/>
                 </svg>
-                <span style="color: #4a4a4a; font-size: 15px;">{{ news.created_at|date:"F d, Y" }}</span>
+                <span>{{ news.created_at|date:"F d, Y" }}</span>
             </div>
 
             <!-- Featured Image -->
             {% if news.image %}
-            <div style="margin-bottom: 30px; border-radius: 16px; overflow: hidden; border: 1px solid rgba(132, 204, 22, 0.2); position: relative;">
-                <img src="{{ news.image.url }}" alt="{{ news.title }}" style="width: 100%; height: auto; display: block;">
+            <div class="detail-image-container">
+                <img src="{{ news.image.url }}" alt="{{ news.title }}" class="detail-image">
                 <!-- Category Badge on Image -->
                 <div style="position: absolute; top: 16px; right: 16px;">
                     <span class="news-badge" style="backdrop-filter: blur(8px); background: rgba(132, 204, 22, 0.95);">{{ news.get_category_display }}</span>
@@ -48,32 +48,30 @@
             {% endif %}
 
             <!-- Excerpt -->
-            <div style="padding: 30px; background: rgba(132, 204, 22, 0.05); border-left: 4px solid #84cc16; border-radius: 8px; margin-bottom: 40px;">
-                <p style="font-size: 18px; color: #2a2a2a; line-height: 1.7; margin: 0; font-weight: 500;">
-                    {{ news.excerpt }}
-                </p>
+            <div class="detail-excerpt">
+                {{ news.excerpt }}
             </div>
 
             <!-- Content -->
-            <div style="color: #4a4a4a; font-size: 16px; line-height: 1.8; margin-bottom: 60px;">
+            <div class="detail-content">
                 {{ news.content|linebreaks }}
             </div>
 
             <!-- Share Section -->
-            <div style="padding: 30px; background: rgba(132, 204, 22, 0.05); border-radius: 12px; text-align: center;">
-                <h3 style="color: #1a1a1a; font-size: 20px; margin-bottom: 20px;">Share this article</h3>
-                <div style="display: flex; gap: 12px; justify-content: center;">
-                    <a href="https://facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank" rel="noopener noreferrer" style="background: rgba(132, 204, 22, 0.1); border: 1px solid rgba(132, 204, 22, 0.2); border-radius: 8px; padding: 12px; display: flex; align-items: center; justify-content: center; transition: all 0.3s; text-decoration: none;">
+            <div class="share-section">
+                <h3 class="detail-section-title">Share this article</h3>
+                <div class="share-buttons">
+                    <a href="https://facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank" rel="noopener noreferrer" class="share-button">
                         <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                         </svg>
                     </a>
-                    <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ news.title }}" target="_blank" rel="noopener noreferrer" style="background: rgba(132, 204, 22, 0.1); border: 1px solid rgba(132, 204, 22, 0.2); border-radius: 8px; padding: 12px; display: flex; align-items: center; justify-content: center; transition: all 0.3s; text-decoration: none;">
+                    <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ news.title }}" target="_blank" rel="noopener noreferrer" class="share-button">
                         <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
                         </svg>
                     </a>
-                    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}&title={{ news.title }}" target="_blank" rel="noopener noreferrer" style="background: rgba(132, 204, 22, 0.1); border: 1px solid rgba(132, 204, 22, 0.2); border-radius: 8px; padding: 12px; display: flex; align-items: center; justify-content: center; transition: all 0.3s; text-decoration: none;">
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}&title={{ news.title }}" target="_blank" rel="noopener noreferrer" class="share-button">
                         <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
                             <rect width="4" height="12" x="2" y="9"/>
