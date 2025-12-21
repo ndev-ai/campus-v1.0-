@@ -1809,3 +1809,31 @@ body {
         justify-content: center;
     }
 }
+/* Contact Form Styles */
+.contact-input {
+    width: 100%;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(132, 204, 22, 0.3);
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s;
+    font-family: inherit;
+    margin-bottom: 20px;
+}
+
+.contact-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-input:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #84cc16;
+}
+
+textarea.contact-input {
+    resize: vertical;
+    min-height: 120px;
+}
