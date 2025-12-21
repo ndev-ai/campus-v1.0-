@@ -17,21 +17,16 @@
                 Back to News
             </a>
 
-            <!-- Category Badge -->
-            <div style="margin-bottom: 20px;">
-                <span class="news-badge" style="display: inline-block;">{{ news.get_category_display }}</span>
-            </div>
-
             <!-- Title -->
             <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: 42px; font-weight: 700; color: #1a1a1a; margin-bottom: 20px; line-height: 1.2;">
                 {{ news.title }}
             </h1>
 
-            <!-- Meta Info -->
-            <div class="news-meta" style="margin-bottom: 40px;">
+            <!-- Meta Info with Category -->
+            <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 40px;">
+                <span class="news-badge" style="display: inline-block;">{{ news.get_category_display }}</span>
+                <span class="news-dot" style="color: rgba(26, 26, 26, 0.3);">•</span>
                 <span class="news-date">{{ news.created_at|date:"F d, Y" }}</span>
-                <span class="news-dot">•</span>
-                <span class="news-read">{{ news.read_time }} min read</span>
             </div>
 
             <!-- Featured Image -->

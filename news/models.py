@@ -18,7 +18,6 @@ class News(models.Model):
     content = models.TextField(verbose_name="Content", help_text="Full article content for detail view")
     image = models.ImageField(upload_to='news/', verbose_name="Image", blank=True, null=True)
     category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, default='environment', verbose_name="Category")
-    read_time = models.IntegerField(default=5, verbose_name="Read Time (minutes)")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     is_published = models.BooleanField(default=True, verbose_name="Published")
