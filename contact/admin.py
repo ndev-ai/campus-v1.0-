@@ -6,16 +6,16 @@ from .models import Contact
 class ContactAdmin(admin.ModelAdmin):
     """Admin configuration for Contact model"""
 
-    list_display = ('name', 'email', 'subject', 'status', 'created_at')
+    list_display = ('name', 'phone', 'subject', 'status', 'created_at')
     list_filter = ('status', 'created_at')
-    search_fields = ('name', 'email', 'subject', 'message')
+    search_fields = ('name', 'phone', 'subject', 'message')
     readonly_fields = ('created_at', 'updated_at')
     date_hierarchy = 'created_at'
     ordering = ('-created_at',)
 
     fieldsets = (
         ('Contact Information', {
-            'fields': ('name', 'email', 'subject')
+            'fields': ('name', 'phone', 'subject')
         }),
         ('Message', {
             'fields': ('message',)
