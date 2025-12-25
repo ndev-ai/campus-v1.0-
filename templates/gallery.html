@@ -16,18 +16,6 @@
             </p>
         </div>
 
-        <!-- Category Filter -->
-        <div class="gallery-filter">
-            <a href="{% url 'gallery:list' %}" class="{% if not selected_category %}news-badge{% else %}news-badge-outline{% endif %}">
-                All
-            </a>
-            {% for category_key, category_name in categories %}
-            <a href="{% url 'gallery:list' %}?category={{ category_key }}" class="{% if selected_category == category_key %}news-badge{% else %}news-badge-outline{% endif %}">
-                {{ category_name }}
-            </a>
-            {% endfor %}
-        </div>
-
         <!-- Gallery Grid -->
         {% if gallery_images %}
         <div class="gallery-grid">
@@ -36,7 +24,7 @@
                 <!-- Image -->
                 <div class="gallery-image-container">
                     {% if image.image %}
-                    <img src="{{ image.image.url }}" alt="{{ image.title }}" class="gallery-image">
+                    <img src="{{ image.image.url }}" alt="Gallery image" class="gallery-image">
                     {% else %}
                     <div class="gallery-image-placeholder">
                         <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -46,32 +34,6 @@
                         </svg>
                     </div>
                     {% endif %}
-
-                    <!-- Category Badge -->
-                    <div style="position: absolute; top: 16px; right: 16px;">
-                        <span class="news-badge" style="backdrop-filter: blur(8px); background: rgba(132, 204, 22, 0.9);">
-                            {{ image.get_category_display }}
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Content -->
-                <div class="gallery-card-content">
-                    <h3 class="gallery-card-title">
-                        {{ image.title }}
-                    </h3>
-                    {% if image.description %}
-                    <p class="gallery-card-description">
-                        {{ image.description|truncatewords:20 }}
-                    </p>
-                    {% endif %}
-                    <div class="gallery-card-date">
-                        <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"/>
-                            <polyline points="12 6 12 12 16 14"/>
-                        </svg>
-                        {{ image.created_at|date:"F d, Y" }}
-                    </div>
                 </div>
             </div>
             {% endfor %}
@@ -85,7 +47,7 @@
                 <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
             </svg>
             <h3 class="gallery-empty-title">No Images Found</h3>
-            <p class="gallery-empty-text">{% if selected_category %}No images in this category yet.{% else %}No images have been added to the gallery yet.{% endif %}</p>
+            <p class="gallery-empty-text">No images have been added to the gallery yet.</p>
         </div>
         {% endif %}
     </div>
