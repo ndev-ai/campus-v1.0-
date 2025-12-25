@@ -23,6 +23,9 @@ msgstr "Bosh sahifa"
 msgid "About"
 msgstr "Biz haqimizda"
 
+msgid "About Us"
+msgstr "Biz haqimizda"
+
 msgid "Programs"
 msgstr "Dasturlar"
 
@@ -62,6 +65,9 @@ msgstr "Ko'p beriladigan savollar"
 
 msgid "For Media"
 msgstr "OAV uchun"
+
+msgid "Follow Us"
+msgstr "Bizni kuzating"
 
 msgid "Creating environmentally sustainable campuses for the education of the future"
 msgstr "Kelajak ta'limi uchun ekologik barqaror kampuslar yaratish"
@@ -222,3 +228,91 @@ msgstr "Hamkor bo'ling"
 
 msgid "Become a Volunteer"
 msgstr "Ko'ngilli bo'ling"
+
+# About page
+msgid "Impact"
+msgstr "Ta'sir"
+
+# Gallery page
+msgid "Our Gallery"
+msgstr "Bizning galereya"
+
+msgid "Moments That Inspire"
+msgstr "Ilhomlantiruvchi lahzalar"
+
+msgid "Explore the journey of Green Campus Initiative through powerful visuals. From campus transformations to community achievements, every image tells a story of positive change."
+msgstr "Yashil Kampus Tashabbusining sayohatini ajoyib tasvirlar orqali kashf eting. Kampus o'zgarishlaridan jamoaviy yutuqlargacha, har bir rasm ijobiy o'zgarish haqida hikoya qiladi."
+
+msgid "No Images Found"
+msgstr "Rasmlar topilmadi"
+
+msgid "No images have been added to the gallery yet."
+msgstr "Galereyaga hali rasmlar qo'shilmagan."
+
+# Contact page
+msgid "Contact Green Campus Initiative"
+msgstr "Yashil Kampus Tashabbusi bilan bog'lanish"
+
+msgid "Get in Touch"
+msgstr "Bog'lanish"
+
+msgid "Have questions about our programs or want to get involved? We'd love to hear from you! Reach out to us and join the movement for a sustainable future."
+msgstr "Dasturlarimiz haqida savollaringiz bormi yoki ishtirok etishni xohlaysizmi? Sizdan eshitishni xohlaymiz! Biz bilan bog'laning va barqaror kelajak uchun harakatga qo'shiling."
+
+msgid "Address"
+msgstr "Manzil"
+
+msgid "Phone"
+msgstr "Telefon"
+
+msgid "Email"
+msgstr "Elektron pochta"
+
+msgid "Send Message"
+msgstr "Xabar yuborish"
+
+msgid "Contact Us"
+msgstr "Biz bilan bog'laning"
+
+msgid "Get Involved"
+msgstr "Ishtirok eting"
+
+msgid "Join us in making campuses more sustainable and environmentally friendly."
+msgstr "Kampuslarni yanada barqaror va ekologik toza qilishda bizga qo'shiling."
+
+# News page
+msgid "Back to News"
+msgstr "Yangiliklarга qaytish"
+
+msgid "Share this article"
+msgstr "Ushbu maqolani ulashing"
+
+msgid "No news available at the moment."
+msgstr "Hozircha yangiliklar mavjud emas."
+
+# Programs page
+msgid "Back to Programs"
+msgstr "Dasturlarga qaytish"
+
+msgid "Interested in This Program?"
+msgstr "Ushbu dasturga qiziqyapsizmi?"
+
+msgid "Overview"
+msgstr "Umumiy ma'lumot"
+
+msgid "Objectives"
+msgstr "Maqsadlar"
+
+msgid "No programs available at the moment."
+msgstr "Hozircha dasturlar mavjud emas."
+
+msgid "Participants"
+msgstr "Ishtirokchilar"
+
+# Events page
+msgid "No events scheduled at the moment."
+msgstr "Hozircha rejalashtirilgan tadbirlar yo'q."
+
+# Team page
+msgid "No team members available at the moment."
+msgstr "Hozircha jamoa a'zolari mavjud emas."

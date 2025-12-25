@@ -23,6 +23,9 @@ msgstr "Главная"
 msgid "About"
 msgstr "О нас"
 
+msgid "About Us"
+msgstr "О нас"
+
 msgid "Programs"
 msgstr "Программы"
 
@@ -62,6 +65,9 @@ msgstr "Часто задаваемые вопросы"
 
 msgid "For Media"
 msgstr "Для СМИ"
+
+msgid "Follow Us"
+msgstr "Подписывайтесь"
 
 msgid "Creating environmentally sustainable campuses for the education of the future"
 msgstr "Создание экологически устойчивых кампусов для образования будущего"
@@ -222,3 +228,91 @@ msgstr "Стать партнёром"
 
 msgid "Become a Volunteer"
 msgstr "Стать волонтёром"
+
+# About page
+msgid "Impact"
+msgstr "Влияние"
+
+# Gallery page
+msgid "Our Gallery"
+msgstr "Наша галерея"
+
+msgid "Moments That Inspire"
+msgstr "Моменты, которые вдохновляют"
+
+msgid "Explore the journey of Green Campus Initiative through powerful visuals. From campus transformations to community achievements, every image tells a story of positive change."
+msgstr "Исследуйте путь инициативы Зелёный Кампус через яркие визуальные образы. От преобразования кампусов до достижений сообщества — каждое изображение рассказывает историю позитивных перемен."
+
+msgid "No Images Found"
+msgstr "Изображения не найдены"
+
+msgid "No images have been added to the gallery yet."
+msgstr "В галерею ещё не добавлены изображения."
+
+# Contact page
+msgid "Contact Green Campus Initiative"
+msgstr "Связаться с инициативой Зелёный Кампус"
+
+msgid "Get in Touch"
+msgstr "Связаться с нами"
+
+msgid "Have questions about our programs or want to get involved? We'd love to hear from you! Reach out to us and join the movement for a sustainable future."
+msgstr "Есть вопросы о наших программах или хотите принять участие? Мы будем рады услышать вас! Свяжитесь с нами и присоединяйтесь к движению за устойчивое будущее."
+
+msgid "Address"
+msgstr "Адрес"
+
+msgid "Phone"
+msgstr "Телефон"
+
+msgid "Email"
+msgstr "Электронная почта"
+
+msgid "Send Message"
+msgstr "Отправить сообщение"
+
+msgid "Contact Us"
+msgstr "Свяжитесь с нами"
+
+msgid "Get Involved"
+msgstr "Примите участие"
+
+msgid "Join us in making campuses more sustainable and environmentally friendly."
+msgstr "Присоединяйтесь к нам, чтобы сделать кампусы более устойчивыми и экологичными."
+
+# News page
+msgid "Back to News"
+msgstr "Назад к новостям"
+
+msgid "Share this article"
+msgstr "Поделиться статьёй"
+
+msgid "No news available at the moment."
+msgstr "На данный момент новостей нет."
+
+# Programs page
+msgid "Back to Programs"
+msgstr "Назад к программам"
+
+msgid "Interested in This Program?"
+msgstr "Заинтересованы в этой программе?"
+
+msgid "Overview"
+msgstr "Обзор"
+
+msgid "Objectives"
+msgstr "Цели"
+
+msgid "No programs available at the moment."
+msgstr "На данный момент программ нет."
+
+msgid "Participants"
+msgstr "Участники"
+
+# Events page
+msgid "No events scheduled at the moment."
+msgstr "На данный момент запланированных мероприятий нет."
+
+# Team page
+msgid "No team members available at the moment."
+msgstr "На данный момент информация о команде недоступна."
