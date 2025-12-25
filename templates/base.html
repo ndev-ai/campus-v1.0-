@@ -1,10 +1,10 @@
-{% load static %}
+{% load static i18n %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ LANGUAGE_CODE }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Green Campus Initiative{% endblock %}</title>
+    <title>{% block title %}{% trans "Green Campus Initiative" %}{% endblock %}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -45,17 +45,56 @@
                     </div>
                 </button>
                 <div class="nav-links" id="navLinks">
-                    <a href="{% url 'core:home' %}" class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a>
-                    <a href="{% url 'core:about' %}" class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a>
-                    <a href="{% url 'programs:list' %}" class="nav-link {% if 'programs' in request.resolver_match.namespace %}active{% endif %}">Programs</a>
-                    <a href="{% url 'news:list' %}" class="nav-link {% if 'news' in request.resolver_match.namespace %}active{% endif %}">News</a>
-                    <a href="{% url 'events:list' %}" class="nav-link {% if 'events' in request.resolver_match.namespace %}active{% endif %}">Events</a>
-                    <a href="{% url 'gallery:list' %}" class="nav-link {% if 'gallery' in request.resolver_match.namespace %}active{% endif %}">Gallery</a>
-                    <a href="{% url 'team:list' %}" class="nav-link {% if 'team' in request.resolver_match.namespace %}active{% endif %}">Team</a>
-                    <a href="{% url 'contact:contact' %}" class="nav-link {% if 'contact' in request.resolver_match.namespace %}active{% endif %}">Contact</a>
+                    <a href="{% url 'core:home' %}" class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">{% trans "Home" %}</a>
+                    <a href="{% url 'core:about' %}" class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">{% trans "About" %}</a>
+                    <a href="{% url 'programs:list' %}" class="nav-link {% if 'programs' in request.resolver_match.namespace %}active{% endif %}">{% trans "Programs" %}</a>
+                    <a href="{% url 'news:list' %}" class="nav-link {% if 'news' in request.resolver_match.namespace %}active{% endif %}">{% trans "News" %}</a>
+                    <a href="{% url 'events:list' %}" class="nav-link {% if 'events' in request.resolver_match.namespace %}active{% endif %}">{% trans "Events" %}</a>
+                    <a href="{% url 'gallery:list' %}" class="nav-link {% if 'gallery' in request.resolver_match.namespace %}active{% endif %}">{% trans "Gallery" %}</a>
+                    <a href="{% url 'team:list' %}" class="nav-link {% if 'team' in request.resolver_match.namespace %}active{% endif %}">{% trans "Team" %}</a>
+                    <a href="{% url 'contact:contact' %}" class="nav-link {% if 'contact' in request.resolver_match.namespace %}active{% endif %}">{% trans "Contact" %}</a>
+
+                    <!-- Language Selector -->
+                    <div class="lang-selector">
+                        <button class="lang-btn" id="langBtn" type="button">
+                            <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                                <path d="M2 12h20"/>
+                            </svg>
+                            <span class="lang-btn-text">
+                                {% get_current_language as LANGUAGE_CODE %}
+                                {% if LANGUAGE_CODE == 'uz' %}UZ{% elif LANGUAGE_CODE == 'ru' %}RU{% else %}EN{% endif %}
+                            </span>
+                            <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m6 9 6 6 6-6"/>
+                            </svg>
+                        </button>
+                        <div class="lang-dropdown" id="langDropdown">
+                            {% get_current_language as LANGUAGE_CODE %}
+                            {% get_available_languages as LANGUAGES %}
+                            {% get_language_info_list for LANGUAGES as languages %}
+                            {% for language in languages %}
+                            <form action="{% url 'set_language' %}" method="post" class="lang-form">
+                                {% csrf_token %}
+                                <input type="hidden" name="language" value="{{ language.code }}">
+                                <input type="hidden" name="next" value="{{ request.get_full_path }}">
+                                <button type="submit" class="lang-option {% if language.code == LANGUAGE_CODE %}active{% endif %}">
+                                    <span class="lang-flag">
+                                        {% if language.code == 'en' %}🇬🇧{% elif language.code == 'uz' %}🇺🇿{% elif language.code == 'ru' %}🇷🇺{% endif %}
+                                    </span>
+                                    <span>{{ language.name_local|capfirst }}</span>
+                                    <svg class="icon check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"/>
+                                    </svg>
+                                </button>
+                            </form>
+                            {% endfor %}
+                        </div>
+                    </div>
 
                     <button class="join-btn">
-                        <span>Join Us</span>
+                        <span>{% trans "Join Us" %}</span>
                         <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 12h14"/>
                             <path d="m12 5 7 7-7 7"/>
@@ -80,7 +119,7 @@
                             </div>
                             <span class="footer-logo-text">Green Campus</span>
                         </div>
-                        <p class="footer-desc">Creating environmentally sustainable campuses for the education of the future</p>
+                        <p class="footer-desc">{% trans "Creating environmentally sustainable campuses for the education of the future" %}</p>
                         <div class="footer-socials">
                             <a href="https://facebook.com/greencampus" class="footer-social-icon" target="_blank" rel="noopener noreferrer">
                                 <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -109,21 +148,21 @@
                     </div>
                     <div class="footer-links">
                         <div class="footer-column">
-                            <h4 class="footer-col-title">Navigation</h4>
-                            <a href="{% url 'core:about' %}" class="footer-link">About</a>
-                            <a href="{% url 'programs:list' %}" class="footer-link">Programs</a>
-                            <a href="{% url 'news:list' %}" class="footer-link">News</a>
-                            <a href="{% url 'events:list' %}" class="footer-link">Events</a>
+                            <h4 class="footer-col-title">{% trans "Navigation" %}</h4>
+                            <a href="{% url 'core:about' %}" class="footer-link">{% trans "About" %}</a>
+                            <a href="{% url 'programs:list' %}" class="footer-link">{% trans "Programs" %}</a>
+                            <a href="{% url 'news:list' %}" class="footer-link">{% trans "News" %}</a>
+                            <a href="{% url 'events:list' %}" class="footer-link">{% trans "Events" %}</a>
                         </div>
                         <div class="footer-column">
-                            <h4 class="footer-col-title">Resources</h4>
-                            <a href="#materials" class="footer-link">Methodological Materials</a>
-                            <a href="#research" class="footer-link">Research</a>
-                            <a href="#faq" class="footer-link">FAQ</a>
-                            <a href="#media" class="footer-link">For Media</a>
+                            <h4 class="footer-col-title">{% trans "Resources" %}</h4>
+                            <a href="#materials" class="footer-link">{% trans "Methodological Materials" %}</a>
+                            <a href="#research" class="footer-link">{% trans "Research" %}</a>
+                            <a href="#faq" class="footer-link">{% trans "FAQ" %}</a>
+                            <a href="#media" class="footer-link">{% trans "For Media" %}</a>
                         </div>
                         <div class="footer-column">
-                            <h4 class="footer-col-title">Contact</h4>
+                            <h4 class="footer-col-title">{% trans "Contact" %}</h4>
                             <p class="footer-contact">
                                 <svg class="icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <rect width="20" height="16" x="2" y="4" rx="2"/>
@@ -142,16 +181,16 @@
                                     <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
                                     <circle cx="12" cy="10" r="3"/>
                                 </svg>
-                                Tashkent, Uzbekistan
+                                {% trans "Tashkent, Uzbekistan" %}
                             </p>
                         </div>
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <p class="copyright">© 2025 Green Campus Initiative. All rights reserved.</p>
+                    <p class="copyright">© 2025 Green Campus Initiative. {% trans "All rights reserved." %}</p>
                     <div class="footer-legal">
-                        <a href="#privacy" class="legal-link">Privacy Policy</a>
-                        <a href="#terms" class="legal-link">Terms of Use</a>
+                        <a href="#privacy" class="legal-link">{% trans "Privacy Policy" %}</a>
+                        <a href="#terms" class="legal-link">{% trans "Terms of Use" %}</a>
                     </div>
                 </div>
             </div>

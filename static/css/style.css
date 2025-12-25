@@ -236,6 +236,43 @@ body {
     display: block;
 }
 
+.lang-form {
+    margin: 0;
+    padding: 0;
+}
+
+.lang-flag {
+    font-size: 18px;
+    line-height: 1;
+}
+
+/* Mobile language selector */
+@media (max-width: 768px) {
+    .lang-selector {
+        width: 100%;
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid rgba(132, 204, 22, 0.1);
+    }
+
+    .lang-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .lang-dropdown {
+        position: relative;
+        top: 0;
+        margin-top: 12px;
+        box-shadow: none;
+        border: 1px solid rgba(132, 204, 22, 0.2);
+    }
+
+    .lang-dropdown.open {
+        display: block;
+    }
+}
+
 .join-btn {
     background: linear-gradient(135deg, #84cc16 0%, #a3e635 100%);
     color: #fff;

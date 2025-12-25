@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n %}
 
-{% block title %}Green Campus Initiative - Creating a Sustainable Future{% endblock %}
+{% block title %}{% trans "Green Campus Initiative - Creating a Sustainable Future" %}{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->
@@ -15,17 +15,17 @@
                 <path d="M3 5h4"/>
                 <path d="M17 19h4"/>
             </svg>
-            <span>Sustainable Development Initiative</span>
+            <span>{% trans "Sustainable Development Initiative" %}</span>
         </div>
         <h1 class="hero-title">
-            <span>Creating a </span>
-            <span class="hero-highlight">green </span>
-            <br><span>future together with universities</span>
+            <span>{% trans "Creating a" %} </span>
+            <span class="hero-highlight">{% trans "green" %} </span>
+            <br><span>{% trans "future together with universities" %}</span>
         </h1>
-        <p class="hero-subtitle">Green Campus Initiative unites students, faculty, and administration to create environmentally sustainable educational spaces</p>
+        <p class="hero-subtitle">{% trans "Green Campus Initiative unites students, faculty, and administration to create environmentally sustainable educational spaces" %}</p>
         <div class="hero-cta">
             <button class="primary-btn">
-                <span>Get Started</span>
+                <span>{% trans "Get Started" %}</span>
                 <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M5 12h14"/>
                     <path d="m12 5 7 7-7 7"/>
@@ -37,7 +37,7 @@
                         <polygon points="5 3 19 12 5 21 5 3"/>
                     </svg>
                 </div>
-                <span>Watch Video</span>
+                <span>{% trans "Watch Video" %}</span>
             </button>
         </div>
     </div>
@@ -52,7 +52,7 @@
                 </svg>
             </div>
             <span class="stat-number">47%</span>
-            <span class="stat-label">Carbon Footprint Reduction</span>
+            <span class="stat-label">{% trans "Carbon Footprint Reduction" %}</span>
         </div>
         <div class="stat-card delay-1">
             <div class="stat-icon-wrap">
@@ -64,7 +64,7 @@
                 </svg>
             </div>
             <span class="stat-number">12K+</span>
-            <span class="stat-label">Active Participants</span>
+            <span class="stat-label">{% trans "Active Participants" %}</span>
         </div>
         <div class="stat-card delay-2">
             <div class="stat-icon-wrap">
@@ -74,7 +74,7 @@
                 </svg>
             </div>
             <span class="stat-number">89</span>
-            <span class="stat-label">Partner Universities</span>
+            <span class="stat-label">{% trans "Partner Universities" %}</span>
         </div>
         <div class="stat-card delay-3">
             <div class="stat-icon-wrap">
@@ -84,7 +84,7 @@
                 </svg>
             </div>
             <span class="stat-number">2.3M</span>
-            <span class="stat-label">Trees Planted</span>
+            <span class="stat-label">{% trans "Trees Planted" %}</span>
         </div>
     </div>
 </section>
@@ -94,10 +94,10 @@
     <div class="section-content">
         <div class="about-grid">
             <div class="about-text">
-                <span class="section-tag">About Green Campus Initiative</span>
-                <h2 class="section-title">A Mission That Unites Generations</h2>
-                <p class="about-paragraph">Since 2018, we have been working to make every university campus a model of environmental responsibility. Our mission is not just about greening territories, but creating a culture of sustainable development.</p>
-                <p class="about-paragraph">We believe that it is within university walls that leaders are formed who will change society's attitude towards the environment.</p>
+                <span class="section-tag">{% trans "About Green Campus Initiative" %}</span>
+                <h2 class="section-title">{% trans "A Mission That Unites Generations" %}</h2>
+                <p class="about-paragraph">{% trans "Since 2018, we have been working to make every university campus a model of environmental responsibility. Our mission is not just about greening territories, but creating a culture of sustainable development." %}</p>
+                <p class="about-paragraph">{% trans "We believe that it is within university walls that leaders are formed who will change society's attitude towards the environment." %}</p>
                 <div class="about-values">
                     <div class="value-item">
                         <div class="value-icon-wrap">
@@ -108,8 +108,8 @@
                             </svg>
                         </div>
                         <div>
-                            <h4 class="value-title">Science & Innovation</h4>
-                            <p class="value-desc">Research-based solutions</p>
+                            <h4 class="value-title">{% trans "Science & Innovation" %}</h4>
+                            <p class="value-desc">{% trans "Research-based solutions" %}</p>
                         </div>
                     </div>
                     <div class="value-item">
@@ -123,8 +123,8 @@
                             </svg>
                         </div>
                         <div>
-                            <h4 class="value-title">Community</h4>
-                            <p class="value-desc">Uniting activists across the country</p>
+                            <h4 class="value-title">{% trans "Community" %}</h4>
+                            <p class="value-desc">{% trans "Uniting activists across the country" %}</p>
                         </div>
                     </div>
                     <div class="value-item">
@@ -137,8 +137,8 @@
                             </svg>
                         </div>
                         <div>
-                            <h4 class="value-title">Sustainability</h4>
-                            <p class="value-desc">Long-term environmental solutions</p>
+                            <h4 class="value-title">{% trans "Sustainability" %}</h4>
+                            <p class="value-desc">{% trans "Long-term environmental solutions" %}</p>
                         </div>
                     </div>
                 </div>
@@ -148,9 +148,9 @@
                     <div class="image-placeholder">
                         <div class="image-pattern"></div>
                         <div class="image-icon-wrap">
-                            <img src="{% static 'img/volunteer.jpg' %}" alt="Our volunteers in action" class="action-image">
+                            <img src="{% static 'img/volunteer.jpg' %}" alt="{% trans 'Our volunteers in action' %}" class="action-image">
                         </div>
-                        <span class="image-label">Our volunteers in action</span>
+                        <span class="image-label">{% trans "Our volunteers in action" %}</span>
                     </div>
                 </div>
                 <div class="floating-card">
@@ -164,7 +164,7 @@
                             <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
                         </svg>
                     </div>
-                    <span class="floating-text">"Green Campus of the Year" Award 2024</span>
+                    <span class="floating-text">{% trans '"Green Campus of the Year" Award 2024' %}</span>
                 </div>
                 <div class="decor-circle-1"></div>
                 <div class="decor-circle-2"></div>
@@ -177,9 +177,9 @@
 <section class="programs-section" id="programs">
     <div class="section-content">
         <div class="programs-header">
-            <span class="section-tag">Our Programs</span>
-            <h2 class="section-title">A Comprehensive Approach to Campus Ecology</h2>
-            <p class="section-subtitle">Key directions that transform universities into sustainable development centers</p>
+            <span class="section-tag">{% trans "Our Programs" %}</span>
+            <h2 class="section-title">{% trans "A Comprehensive Approach to Campus Ecology" %}</h2>
+            <p class="section-subtitle">{% trans "Key directions that transform universities into sustainable development centers" %}</p>
         </div>
         <div class="programs-grid">
             {% for program in programs %}
@@ -196,7 +196,7 @@
                 <h3 class="program-title">{{ program.title }}</h3>
                 <p class="program-desc">{{ program.description }}</p>
                 <a href="{% url 'programs:detail' program.slug %}" class="program-link">
-                    Learn More
+                    {% trans "Learn More" %}
                     <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M5 12h14"/>
                         <path d="m12 5 7 7-7 7"/>
@@ -214,8 +214,8 @@
     <div class="impact-bg"></div>
     <div class="section-content">
         <div class="impact-content">
-            <span class="section-tag-light">Our Impact</span>
-            <h2 class="impact-title">In 6 years, we have changed the perception of what a university campus can be</h2>
+            <span class="section-tag-light">{% trans "Our Impact" %}</span>
+            <h2 class="impact-title">{% trans "In 6 years, we have changed the perception of what a university campus can be" %}</h2>
             <div class="impact-grid">
                 <div class="impact-item">
                     <svg class="icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -225,7 +225,7 @@
                         <path d="M8 17v-3"/>
                     </svg>
                     <span class="impact-number">156</span>
-                    <span class="impact-label">Eco-projects Implemented</span>
+                    <span class="impact-label">{% trans "Eco-projects Implemented" %}</span>
                 </div>
                 <div class="impact-item">
                     <svg class="icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -233,7 +233,7 @@
                         <polyline points="16 7 22 7 22 13"/>
                     </svg>
                     <span class="impact-number">$2M</span>
-                    <span class="impact-label">Funding Raised</span>
+                    <span class="impact-label">{% trans "Funding Raised" %}</span>
                 </div>
                 <div class="impact-item">
                     <svg class="icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#a3e635" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -241,11 +241,11 @@
                         <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
                     </svg>
                     <span class="impact-number">320</span>
-                    <span class="impact-label">Tons of CO₂ Offset</span>
+                    <span class="impact-label">{% trans "Tons of CO₂ Offset" %}</span>
                 </div>
             </div>
             <button class="impact-btn">
-                <span>Read Annual Report</span>
+                <span>{% trans "Read Annual Report" %}</span>
                 <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
                     <polyline points="15 3 21 3 21 9"/>
@@ -260,8 +260,8 @@
 <section class="news-section" id="news">
     <div class="section-content">
         <div class="news-header">
-            <span class="section-tag">Latest News</span>
-            <h2 class="section-title">Stay Updated with Our Latest Achievements</h2>
+            <span class="section-tag">{% trans "Latest News" %}</span>
+            <h2 class="section-title">{% trans "Stay Updated with Our Latest Achievements" %}</h2>
         </div>
         <div class="news-grid">
             {% for news in news_list %}
@@ -279,13 +279,11 @@
                 <div class="news-content">
                     <div class="news-meta">
                         <span class="news-date">{{ news.created_at|date:"F d, Y" }}</span>
-                        <span class="news-dot">•</span>
-                        <span class="news-read">{{ news.read_time }} min read</span>
                     </div>
                     <h3 class="news-title">{{ news.title }}</h3>
                     <p class="news-excerpt">{{ news.excerpt }}</p>
                     <a href="{% url 'news:detail' news.slug %}" class="news-link">
-                        Read More
+                        {% trans "Read More" %}
                         <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M5 12h14"/>
                             <path d="m12 5 7 7-7 7"/>
@@ -303,11 +301,11 @@
     <div class="section-content">
         <div class="events-header">
             <div>
-                <span class="section-tag">Event Calendar</span>
-                <h2 class="section-title">Upcoming Events</h2>
+                <span class="section-tag">{% trans "Event Calendar" %}</span>
+                <h2 class="section-title">{% trans "Upcoming Events" %}</h2>
             </div>
             <a href="{% url 'events:list' %}" class="all-events-btn">
-                <span>All Events</span>
+                <span>{% trans "All Events" %}</span>
                 <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M5 12h14"/>
                     <path d="m12 5 7 7-7 7"/>
@@ -338,7 +336,7 @@
                     </p>
                 </div>
                 <button class="event-btn">
-                    Register
+                    {% trans "Register" %}
                     <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M5 12h14"/>
                         <path d="m12 5 7 7-7 7"/>
@@ -354,8 +352,8 @@
 <section class="team-section" id="team">
     <div class="section-content">
         <div class="team-header">
-            <span class="section-tag">Our Team</span>
-            <h2 class="section-title">The People Making It Happen</h2>
+            <span class="section-tag">{% trans "Our Team" %}</span>
+            <h2 class="section-title">{% trans "The People Making It Happen" %}</h2>
         </div>
         <div class="team-grid">
             {% for member in team_members %}
@@ -417,17 +415,17 @@
         <svg class="icon cta-heart" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
         </svg>
-        <h2 class="cta-title">Ready to Make Your Campus Green?</h2>
-        <p class="cta-text">Join the movement for a sustainable future. Together we can do more!</p>
+        <h2 class="cta-title">{% trans "Ready to Make Your Campus Green?" %}</h2>
+        <p class="cta-text">{% trans "Join the movement for a sustainable future. Together we can do more!" %}</p>
         <div class="cta-buttons">
             <button class="cta-primary-btn">
-                <span>Become a Partner</span>
+                <span>{% trans "Become a Partner" %}</span>
                 <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M5 12h14"/>
                     <path d="m12 5 7 7-7 7"/>
                 </svg>
             </button>
-            <button class="cta-secondary-btn">Become a Volunteer</button>
+            <button class="cta-secondary-btn">{% trans "Become a Volunteer" %}</button>
         </div>
     </div>
 </section>

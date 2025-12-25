@@ -1,0 +1,224 @@
+# Uzbek translations for Green Campus Initiative
+# Copyright (C) 2025 Green Campus Initiative
+# This file is distributed under the same license as the Green Campus package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Green Campus 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-25 12:00+0500\n"
+"PO-Revision-Date: 2025-12-25 12:00+0500\n"
+"Last-Translator: Green Campus Team\n"
+"Language-Team: Uzbek\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# Navigation
+msgid "Home"
+msgstr "Bosh sahifa"
+
+msgid "About"
+msgstr "Biz haqimizda"
+
+msgid "Programs"
+msgstr "Dasturlar"
+
+msgid "News"
+msgstr "Yangiliklar"
+
+msgid "Events"
+msgstr "Tadbirlar"
+
+msgid "Gallery"
+msgstr "Galereya"
+
+msgid "Team"
+msgstr "Jamoa"
+
+msgid "Contact"
+msgstr "Aloqa"
+
+msgid "Join Us"
+msgstr "Bizga qo'shiling"
+
+# Footer
+msgid "Navigation"
+msgstr "Navigatsiya"
+
+msgid "Resources"
+msgstr "Resurslar"
+
+msgid "Methodological Materials"
+msgstr "Metodik materiallar"
+
+msgid "Research"
+msgstr "Tadqiqotlar"
+
+msgid "FAQ"
+msgstr "Ko'p beriladigan savollar"
+
+msgid "For Media"
+msgstr "OAV uchun"
+
+msgid "Creating environmentally sustainable campuses for the education of the future"
+msgstr "Kelajak ta'limi uchun ekologik barqaror kampuslar yaratish"
+
+msgid "Tashkent, Uzbekistan"
+msgstr "Toshkent, O'zbekiston"
+
+msgid "All rights reserved."
+msgstr "Barcha huquqlar himoyalangan."
+
+msgid "Privacy Policy"
+msgstr "Maxfiylik siyosati"
+
+msgid "Terms of Use"
+msgstr "Foydalanish shartlari"
+
+# Home page
+msgid "Green Campus Initiative"
+msgstr "Yashil Kampus Tashabbusi"
+
+msgid "Green Campus Initiative - Creating a Sustainable Future"
+msgstr "Yashil Kampus Tashabbusi - Barqaror kelajak yaratish"
+
+msgid "Sustainable Development Initiative"
+msgstr "Barqaror Rivojlanish Tashabbusi"
+
+msgid "Creating a"
+msgstr "Universitetlar bilan birga"
+
+msgid "green"
+msgstr "yashil"
+
+msgid "future together with universities"
+msgstr "kelajak yaratish"
+
+msgid "Green Campus Initiative unites students, faculty, and administration to create environmentally sustainable educational spaces"
+msgstr "Yashil Kampus Tashabbusi talabalar, o'qituvchilar va ma'muriyatni ekologik barqaror ta'lim muhitini yaratish uchun birlashtiradi"
+
+msgid "Get Started"
+msgstr "Boshlash"
+
+msgid "Watch Video"
+msgstr "Videoni ko'rish"
+
+msgid "Carbon Footprint Reduction"
+msgstr "Uglerod izini kamaytirish"
+
+msgid "Active Participants"
+msgstr "Faol ishtirokchilar"
+
+msgid "Partner Universities"
+msgstr "Hamkor universitetlar"
+
+msgid "Trees Planted"
+msgstr "Ekilgan daraxtlar"
+
+msgid "About Green Campus Initiative"
+msgstr "Yashil Kampus Tashabbusi haqida"
+
+msgid "A Mission That Unites Generations"
+msgstr "Avlodlarni birlashtiruvchi missiya"
+
+msgid "Since 2018, we have been working to make every university campus a model of environmental responsibility. Our mission is not just about greening territories, but creating a culture of sustainable development."
+msgstr "2018-yildan beri biz har bir universitet kampusini ekologik mas'uliyat namunasiga aylantirishga intilamiz. Bizning missiyamiz faqat hududlarni yashillantirish emas, balki barqaror rivojlanish madaniyatini yaratishdir."
+
+msgid "We believe that it is within university walls that leaders are formed who will change society's attitude towards the environment."
+msgstr "Biz ishonamizki, aynan universitet devorlari ichida jamiyatning atrof-muhitga munosabatini o'zgartiradigan yetakchilar shakllanadi."
+
+msgid "Science & Innovation"
+msgstr "Fan va innovatsiya"
+
+msgid "Research-based solutions"
+msgstr "Ilmiy asoslangan yechimlar"
+
+msgid "Community"
+msgstr "Jamoa"
+
+msgid "Uniting activists across the country"
+msgstr "Mamlakat bo'ylab faollarni birlashtirish"
+
+msgid "Sustainability"
+msgstr "Barqarorlik"
+
+msgid "Long-term environmental solutions"
+msgstr "Uzoq muddatli ekologik yechimlar"
+
+msgid "Our volunteers in action"
+msgstr "Bizning ko'ngillilarimiz harakatda"
+
+msgid "\"Green Campus of the Year\" Award 2024"
+msgstr "\"Yilning yashil kampusi\" mukofoti 2024"
+
+msgid "Our Programs"
+msgstr "Bizning dasturlarimiz"
+
+msgid "A Comprehensive Approach to Campus Ecology"
+msgstr "Kampus ekologiyasiga kompleks yondashuv"
+
+msgid "Key directions that transform universities into sustainable development centers"
+msgstr "Universitetlarni barqaror rivojlanish markazlariga aylantiradigan asosiy yo'nalishlar"
+
+msgid "Learn More"
+msgstr "Batafsil"
+
+msgid "Our Impact"
+msgstr "Bizning ta'sirimiz"
+
+msgid "In 6 years, we have changed the perception of what a university campus can be"
+msgstr "6 yil ichida biz universitet kampusi qanday bo'lishi mumkinligi haqidagi tasavvurni o'zgartirdik"
+
+msgid "Eco-projects Implemented"
+msgstr "Amalga oshirilgan eko-loyihalar"
+
+msgid "Funding Raised"
+msgstr "Jalb qilingan mablag'"
+
+msgid "Tons of CO₂ Offset"
+msgstr "Tonna CO₂ qoplanishi"
+
+msgid "Read Annual Report"
+msgstr "Yillik hisobotni o'qish"
+
+msgid "Latest News"
+msgstr "So'nggi yangiliklar"
+
+msgid "Stay Updated with Our Latest Achievements"
+msgstr "Bizning so'nggi yutuqlarimizdan xabardor bo'ling"
+
+msgid "Read More"
+msgstr "Batafsil o'qish"
+
+msgid "Event Calendar"
+msgstr "Tadbirlar kalendari"
+
+msgid "Upcoming Events"
+msgstr "Kelgusi tadbirlar"
+
+msgid "All Events"
+msgstr "Barcha tadbirlar"
+
+msgid "Register"
+msgstr "Ro'yxatdan o'tish"
+
+msgid "Our Team"
+msgstr "Bizning jamoa"
+
+msgid "The People Making It Happen"
+msgstr "Buni amalga oshirayotgan odamlar"
+
+msgid "Ready to Make Your Campus Green?"
+msgstr "Kampusingizni yashil qilishga tayyormisiz?"
+
+msgid "Join the movement for a sustainable future. Together we can do more!"
+msgstr "Barqaror kelajak uchun harakatga qo'shiling. Birgalikda ko'proq narsaga erishamiz!"
+
+msgid "Become a Partner"
+msgstr "Hamkor bo'ling"
+
+msgid "Become a Volunteer"
+msgstr "Ko'ngilli bo'ling"

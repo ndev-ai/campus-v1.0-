@@ -4,15 +4,19 @@ const nav = document.getElementById('nav');
 const heroStats = document.getElementById('heroStats');
 const mobileMenuToggle = document.getElementById('mobileMenuToggle');
 const navLinks = document.getElementById('navLinks');
+const langBtn = document.getElementById('langBtn');
+const langDropdown = document.getElementById('langDropdown');
 
 // State
 let countersVisible = false;
 let mobileMenuOpen = false;
+let langDropdownOpen = false;
 
 // Initialize
 document.addEventListener('DOMContentLoaded', function() {
     setupEventListeners();
     setupIntersectionObserver();
+    setupLanguageSelector();
 });
 
 // Event Listeners
@@ -111,4 +115,32 @@ function animateCounters() {
             clearInterval(timer);
         }
     }, interval);
+}
+
+// Setup Language Selector
+function setupLanguageSelector() {
+    if (langBtn && langDropdown) {
+        // Toggle dropdown on button click
+        langBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            langDropdownOpen = !langDropdownOpen;
+            langDropdown.classList.toggle('open');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (langDropdownOpen && !langBtn.contains(e.target) && !langDropdown.contains(e.target)) {
+                langDropdownOpen = false;
+                langDropdown.classList.remove('open');
+            }
+        });
+
+        // Close dropdown on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && langDropdownOpen) {
+                langDropdownOpen = false;
+                langDropdown.classList.remove('open');
+            }
+        });
+    }
 }

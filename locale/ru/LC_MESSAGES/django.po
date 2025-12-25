@@ -1,0 +1,224 @@
+# Russian translations for Green Campus Initiative
+# Copyright (C) 2025 Green Campus Initiative
+# This file is distributed under the same license as the Green Campus package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Green Campus 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-25 12:00+0500\n"
+"PO-Revision-Date: 2025-12-25 12:00+0500\n"
+"Last-Translator: Green Campus Team\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+# Navigation
+msgid "Home"
+msgstr "Главная"
+
+msgid "About"
+msgstr "О нас"
+
+msgid "Programs"
+msgstr "Программы"
+
+msgid "News"
+msgstr "Новости"
+
+msgid "Events"
+msgstr "Мероприятия"
+
+msgid "Gallery"
+msgstr "Галерея"
+
+msgid "Team"
+msgstr "Команда"
+
+msgid "Contact"
+msgstr "Контакты"
+
+msgid "Join Us"
+msgstr "Присоединиться"
+
+# Footer
+msgid "Navigation"
+msgstr "Навигация"
+
+msgid "Resources"
+msgstr "Ресурсы"
+
+msgid "Methodological Materials"
+msgstr "Методические материалы"
+
+msgid "Research"
+msgstr "Исследования"
+
+msgid "FAQ"
+msgstr "Часто задаваемые вопросы"
+
+msgid "For Media"
+msgstr "Для СМИ"
+
+msgid "Creating environmentally sustainable campuses for the education of the future"
+msgstr "Создание экологически устойчивых кампусов для образования будущего"
+
+msgid "Tashkent, Uzbekistan"
+msgstr "Ташкент, Узбекистан"
+
+msgid "All rights reserved."
+msgstr "Все права защищены."
+
+msgid "Privacy Policy"
+msgstr "Политика конфиденциальности"
+
+msgid "Terms of Use"
+msgstr "Условия использования"
+
+# Home page
+msgid "Green Campus Initiative"
+msgstr "Инициатива Зелёный Кампус"
+
+msgid "Green Campus Initiative - Creating a Sustainable Future"
+msgstr "Инициатива Зелёный Кампус - Создаём устойчивое будущее"
+
+msgid "Sustainable Development Initiative"
+msgstr "Инициатива устойчивого развития"
+
+msgid "Creating a"
+msgstr "Создаём"
+
+msgid "green"
+msgstr "зелёное"
+
+msgid "future together with universities"
+msgstr "будущее вместе с университетами"
+
+msgid "Green Campus Initiative unites students, faculty, and administration to create environmentally sustainable educational spaces"
+msgstr "Инициатива Зелёный Кампус объединяет студентов, преподавателей и администрацию для создания экологически устойчивых образовательных пространств"
+
+msgid "Get Started"
+msgstr "Начать"
+
+msgid "Watch Video"
+msgstr "Смотреть видео"
+
+msgid "Carbon Footprint Reduction"
+msgstr "Сокращение углеродного следа"
+
+msgid "Active Participants"
+msgstr "Активные участники"
+
+msgid "Partner Universities"
+msgstr "Университеты-партнёры"
+
+msgid "Trees Planted"
+msgstr "Посажено деревьев"
+
+msgid "About Green Campus Initiative"
+msgstr "Об инициативе Зелёный Кампус"
+
+msgid "A Mission That Unites Generations"
+msgstr "Миссия, объединяющая поколения"
+
+msgid "Since 2018, we have been working to make every university campus a model of environmental responsibility. Our mission is not just about greening territories, but creating a culture of sustainable development."
+msgstr "С 2018 года мы работаем над тем, чтобы каждый университетский кампус стал образцом экологической ответственности. Наша миссия — не просто озеленение территорий, а создание культуры устойчивого развития."
+
+msgid "We believe that it is within university walls that leaders are formed who will change society's attitude towards the environment."
+msgstr "Мы верим, что именно в стенах университетов формируются лидеры, которые изменят отношение общества к окружающей среде."
+
+msgid "Science & Innovation"
+msgstr "Наука и инновации"
+
+msgid "Research-based solutions"
+msgstr "Решения на основе исследований"
+
+msgid "Community"
+msgstr "Сообщество"
+
+msgid "Uniting activists across the country"
+msgstr "Объединение активистов по всей стране"
+
+msgid "Sustainability"
+msgstr "Устойчивость"
+
+msgid "Long-term environmental solutions"
+msgstr "Долгосрочные экологические решения"
+
+msgid "Our volunteers in action"
+msgstr "Наши волонтёры в действии"
+
+msgid "\"Green Campus of the Year\" Award 2024"
+msgstr "Награда \"Зелёный кампус года\" 2024"
+
+msgid "Our Programs"
+msgstr "Наши программы"
+
+msgid "A Comprehensive Approach to Campus Ecology"
+msgstr "Комплексный подход к экологии кампуса"
+
+msgid "Key directions that transform universities into sustainable development centers"
+msgstr "Ключевые направления, превращающие университеты в центры устойчивого развития"
+
+msgid "Learn More"
+msgstr "Подробнее"
+
+msgid "Our Impact"
+msgstr "Наше влияние"
+
+msgid "In 6 years, we have changed the perception of what a university campus can be"
+msgstr "За 6 лет мы изменили представление о том, каким может быть университетский кампус"
+
+msgid "Eco-projects Implemented"
+msgstr "Реализованных эко-проектов"
+
+msgid "Funding Raised"
+msgstr "Привлечено средств"
+
+msgid "Tons of CO₂ Offset"
+msgstr "Тонн CO₂ компенсировано"
+
+msgid "Read Annual Report"
+msgstr "Читать годовой отчёт"
+
+msgid "Latest News"
+msgstr "Последние новости"
+
+msgid "Stay Updated with Our Latest Achievements"
+msgstr "Будьте в курсе наших последних достижений"
+
+msgid "Read More"
+msgstr "Читать далее"
+
+msgid "Event Calendar"
+msgstr "Календарь мероприятий"
+
+msgid "Upcoming Events"
+msgstr "Предстоящие мероприятия"
+
+msgid "All Events"
+msgstr "Все мероприятия"
+
+msgid "Register"
+msgstr "Зарегистрироваться"
+
+msgid "Our Team"
+msgstr "Наша команда"
+
+msgid "The People Making It Happen"
+msgstr "Люди, которые делают это возможным"
+
+msgid "Ready to Make Your Campus Green?"
+msgstr "Готовы сделать свой кампус зелёным?"
+
+msgid "Join the movement for a sustainable future. Together we can do more!"
+msgstr "Присоединяйтесь к движению за устойчивое будущее. Вместе мы можем больше!"
+
+msgid "Become a Partner"
+msgstr "Стать партнёром"
+
+msgid "Become a Volunteer"
+msgstr "Стать волонтёром"
