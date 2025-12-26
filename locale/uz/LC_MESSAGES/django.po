@@ -316,3 +316,13 @@ msgstr "Hozircha rejalashtirilgan tadbirlar yo'q."
 # Team page
 msgid "No team members available at the moment."
 msgstr "Hozircha jamoa a'zolari mavjud emas."
+
+# View All buttons
+msgid "All Programs"
+msgstr "Barcha dasturlar"
+
+msgid "All News"
+msgstr "Barcha yangiliklar"
+
+msgid "View All"
+msgstr "Hammasini ko'rish"

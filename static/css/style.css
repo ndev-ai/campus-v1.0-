@@ -875,6 +875,43 @@ body {
     opacity: 1;
 }
 
+/* Section Footer with View All Button */
+.section-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+}
+
+.view-all-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background-color: transparent;
+    border: 2px solid #84cc16;
+    border-radius: 50px;
+    color: #84cc16;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+    background-color: #84cc16;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(132, 204, 22, 0.3);
+}
+
+.view-all-btn .icon {
+    transition: transform 0.3s ease;
+}
+
+.view-all-btn:hover .icon {
+    transform: translateX(5px);
+}
+
 /* Impact Section */
 .impact-section {
     padding: 120px 32px;

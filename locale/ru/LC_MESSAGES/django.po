@@ -316,3 +316,13 @@ msgstr "На данный момент запланированных мероп
 # Team page
 msgid "No team members available at the moment."
 msgstr "На данный момент информация о команде недоступна."
+
+# View All buttons
+msgid "All Programs"
+msgstr "Все программы"
+
+msgid "All News"
+msgstr "Все новости"
+
+msgid "View All"
+msgstr "Смотреть все"
