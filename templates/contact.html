@@ -82,33 +82,29 @@
             </div>
 
             <div class="about-visual">
-                <div class="image-card" style="height: 100%;">
-                    <div class="image-placeholder" style="height: 100%; display: flex; align-items: center; justify-content: center;">
-                        <div style="padding: 40px; width: 100%;">
-                            {% if messages %}
-                                {% for message in messages %}
-                                    <div style="padding: 12px 16px; margin-bottom: 20px; border-radius: 8px; {% if message.tags == 'success' %}background: rgba(132, 204, 22, 0.2); border: 1px solid rgba(132, 204, 22, 0.4); color: #84cc16;{% else %}background: rgba(239, 68, 68, 0.2); border: 1px solid rgba(239, 68, 68, 0.4); color: #ef4444;{% endif %}">
-                                        {{ message }}
-                                    </div>
-                                {% endfor %}
-                            {% endif %}
+                <div class="contact-form-wrapper">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div style="padding: 12px 16px; margin-bottom: 20px; border-radius: 8px; {% if message.tags == 'success' %}background: rgba(132, 204, 22, 0.2); border: 1px solid rgba(132, 204, 22, 0.4); color: #84cc16;{% else %}background: rgba(239, 68, 68, 0.2); border: 1px solid rgba(239, 68, 68, 0.4); color: #ef4444;{% endif %}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
 
-                            <form method="post">
-                                {% csrf_token %}
-                                {{ form.name }}
-                                {{ form.phone }}
-                                {{ form.subject }}
-                                {{ form.message }}
-                                <button type="submit" class="primary-btn" style="width: 100%; margin-top: 10px;">
-                                    <span>{% trans "Send Message" %}</span>
-                                    <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M5 12h14"/>
-                                        <path d="m12 5 7 7-7 7"/>
-                                    </svg>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.name }}
+                        {{ form.phone }}
+                        {{ form.subject }}
+                        {{ form.message }}
+                        <button type="submit" class="primary-btn" style="width: 100%; margin-top: 10px;">
+                            <span>{% trans "Send Message" %}</span>
+                            <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"/>
+                                <path d="m12 5 7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
