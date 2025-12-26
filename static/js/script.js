@@ -142,5 +142,19 @@ function setupLanguageSelector() {
                 langDropdown.classList.remove('open');
             }
         });
+
+        // Fix language switching - remove old language prefix from next URL
+        const langForms = langDropdown.querySelectorAll('.lang-form');
+        langForms.forEach(form => {
+            form.addEventListener('submit', function(e) {
+                const nextInput = form.querySelector('input[name="next"]');
+                if (nextInput) {
+                    let path = nextInput.value;
+                    // Remove language prefix (e.g., /uz/, /ru/, /en/)
+                    path = path.replace(/^\/(uz|ru|en)(\/|$)/, '/');
+                    nextInput.value = path || '/';
+                }
+            });
+        });
     }
 }
