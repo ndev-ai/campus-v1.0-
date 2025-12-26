@@ -50,6 +50,9 @@
             </div>
             {% endfor %}
         </div>
+
+        <!-- Pagination -->
+        {% include 'includes/pagination.html' with page_obj=events %}
     </div>
 </section>
 {% endblock %}

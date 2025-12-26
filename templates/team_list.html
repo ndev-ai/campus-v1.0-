@@ -59,6 +59,9 @@
             </div>
             {% endfor %}
         </div>
+
+        <!-- Pagination -->
+        {% include 'includes/pagination.html' with page_obj=team_members %}
     </div>
 </section>
 {% endblock %}

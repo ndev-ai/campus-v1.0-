@@ -1,12 +1,18 @@
 from django.shortcuts import render, get_object_or_404
+from django.core.paginator import Paginator
 from .models import News
 
 
 def news_list(request):
-    """News list view"""
-    news = News.objects.filter(is_published=True)
+    """News list view with pagination"""
+    news_queryset = News.objects.filter(is_published=True)
+    paginator = Paginator(news_queryset, 6)  # 6 items per page
+
+    page_number = request.GET.get('page')
+    news_list = paginator.get_page(page_number)
+
     context = {
-        'news_list': news
+        'news_list': news_list
     }
     return render(request, 'news_list.html', context)
 
