@@ -135,6 +135,8 @@
 .event-detail-section {
     min-height: 100vh;
     padding: 120px 0 80px;
+    position: relative;
+    z-index: 1;
 }
 
 .back-nav {
@@ -145,14 +147,15 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    color: rgba(255, 255, 255, 0.7);
+    color: #64748b;
     text-decoration: none;
     font-size: 14px;
     transition: color 0.3s ease;
+    font-weight: 500;
 }
 
 .back-link:hover {
-    color: #00ff88;
+    color: #84cc16;
 }
 
 .event-detail-container {
@@ -163,11 +166,11 @@
 
 .event-info-card,
 .registration-card {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #ffffff;
+    border: 1px solid rgba(132, 204, 22, 0.15);
     border-radius: 16px;
     padding: 40px;
+    box-shadow: 0 8px 40px rgba(132, 204, 22, 0.08);
 }
 
 .event-header-detail {
@@ -177,8 +180,9 @@
 .event-title-detail {
     font-size: 32px;
     font-weight: 700;
-    color: #fff;
+    color: #1a1a2e;
     margin-top: 10px;
+    line-height: 1.2;
 }
 
 .event-meta-grid {
@@ -192,45 +196,52 @@
     align-items: flex-start;
     gap: 16px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(132, 204, 22, 0.05);
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(132, 204, 22, 0.1);
+    transition: all 0.3s ease;
+}
+
+.event-meta-item:hover {
+    background: rgba(132, 204, 22, 0.08);
+    border-color: rgba(132, 204, 22, 0.2);
 }
 
 .icon-large {
-    color: #00ff88;
+    color: #84cc16;
     flex-shrink: 0;
 }
 
 .meta-label {
     font-size: 12px;
-    color: rgba(255, 255, 255, 0.5);
+    color: #64748b;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 4px;
+    font-weight: 600;
 }
 
 .meta-value {
     font-size: 16px;
-    color: #fff;
-    font-weight: 500;
+    color: #1a1a2e;
+    font-weight: 600;
 }
 
 .event-description {
     padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(132, 204, 22, 0.15);
 }
 
 .description-title {
     font-size: 18px;
-    font-weight: 600;
-    color: #fff;
+    font-weight: 700;
+    color: #1a1a2e;
     margin-bottom: 16px;
 }
 
 .description-text {
-    color: rgba(255, 255, 255, 0.7);
-    line-height: 1.6;
+    color: #475569;
+    line-height: 1.8;
 }
 
 .registration-header {
@@ -240,38 +251,39 @@
 .registration-title {
     font-size: 24px;
     font-weight: 700;
-    color: #fff;
+    color: #1a1a2e;
     margin-bottom: 8px;
 }
 
 .registration-subtitle {
-    color: rgba(255, 255, 255, 0.6);
+    color: #64748b;
     font-size: 14px;
 }
 
 .alert {
-    padding: 12px 16px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin-bottom: 24px;
     font-size: 14px;
+    font-weight: 500;
 }
 
 .alert-success {
-    background: rgba(0, 255, 136, 0.1);
-    border: 1px solid rgba(0, 255, 136, 0.3);
-    color: #00ff88;
+    background: rgba(132, 204, 22, 0.1);
+    border: 1px solid rgba(132, 204, 22, 0.3);
+    color: #65a30d;
 }
 
 .alert-error {
-    background: rgba(255, 68, 68, 0.1);
-    border: 1px solid rgba(255, 68, 68, 0.3);
-    color: #ff4444;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #dc2626;
 }
 
 .registration-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 24px;
 }
 
 .form-group {
@@ -282,69 +294,91 @@
 
 .form-label {
     font-size: 14px;
-    font-weight: 500;
-    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    color: #1a1a2e;
 }
 
 .required {
-    color: #ff4444;
+    color: #dc2626;
 }
 
 .form-input,
 .form-textarea {
     width: 100%;
-    padding: 12px 16px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    color: #fff;
-    font-size: 14px;
-    font-family: inherit;
+    padding: 14px 16px;
+    background: #ffffff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 10px;
+    color: #1a1a2e;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
     transition: all 0.3s ease;
 }
 
 .form-input:focus,
 .form-textarea:focus {
     outline: none;
-    border-color: #00ff88;
-    background: rgba(255, 255, 255, 0.08);
+    border-color: #84cc16;
+    background: rgba(132, 204, 22, 0.02);
+    box-shadow: 0 0 0 4px rgba(132, 204, 22, 0.1);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #94a3b8;
 }
 
 .form-textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 120px;
 }
 
 .form-error {
-    color: #ff4444;
-    font-size: 12px;
+    color: #dc2626;
+    font-size: 13px;
+    font-weight: 500;
 }
 
 .btn-submit {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 14px 28px;
-    background: linear-gradient(135deg, #00ff88, #00cc6a);
-    color: #0a0f1a;
+    gap: 10px;
+    padding: 16px 32px;
+    background: linear-gradient(135deg, #84cc16, #65a30d);
+    color: #ffffff;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(132, 204, 22, 0.2);
 }
 
 .btn-submit:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0, 255, 136, 0.3);
+    box-shadow: 0 8px 24px rgba(132, 204, 22, 0.35);
+    background: linear-gradient(135deg, #65a30d, #84cc16);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
 }
 
 @media (max-width: 968px) {
     .event-detail-container {
         grid-template-columns: 1fr;
+    }
+
+    .event-info-card,
+    .registration-card {
+        padding: 28px;
+    }
+
+    .event-title-detail {
+        font-size: 26px;
     }
 }
 </style>
