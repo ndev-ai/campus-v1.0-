@@ -358,6 +358,40 @@ msgstr "Siz allaqachon ushbu elektron pochta bilan ushbu tadbirga ro'yxatdan o't
 msgid "Please correct the errors below."
 msgstr "Quyidagi xatolarni tuzating."
 
+# Form placeholders and labels
+msgid "Enter your full name"
+msgstr "To'liq ismingizni kiriting"
+
+msgid "Enter your email"
+msgstr "Elektron pochtangizni kiriting"
+
+msgid "Enter your phone number"
+msgstr "Telefon raqamingizni kiriting"
+
+msgid "Any additional notes (optional)"
+msgstr "Qo'shimcha izohlar (ixtiyoriy)"
+
+msgid "Please enter a valid phone number"
+msgstr "To'g'ri telefon raqamini kiriting"
+
+msgid "Your Name"
+msgstr "Ismingiz"
+
+msgid "What is this about?"
+msgstr "Bu nima haqida?"
+
+msgid "Your message..."
+msgstr "Xabaringiz..."
+
+msgid "Name"
+msgstr "Ism"
+
+msgid "Subject"
+msgstr "Mavzu"
+
+msgid "Message"
+msgstr "Xabar"
+
 # Team page
 msgid "No team members available at the moment."
 msgstr "Hozircha jamoa a'zolari mavjud emas."

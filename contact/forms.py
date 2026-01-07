@@ -1,4 +1,5 @@
 from django import forms
+from django.utils.translation import gettext_lazy as _
 from .models import Contact
 
 
@@ -10,7 +11,7 @@ class ContactForm(forms.ModelForm):
         fields = ['name', 'phone', 'subject', 'message']
         widgets = {
             'name': forms.TextInput(attrs={
-                'placeholder': 'Your Name',
+                'placeholder': _('Your Name'),
                 'class': 'contact-input',
             }),
             'phone': forms.TextInput(attrs={
@@ -18,18 +19,18 @@ class ContactForm(forms.ModelForm):
                 'class': 'contact-input',
             }),
             'subject': forms.TextInput(attrs={
-                'placeholder': 'What is this about?',
+                'placeholder': _('What is this about?'),
                 'class': 'contact-input',
             }),
             'message': forms.Textarea(attrs={
                 'rows': 5,
-                'placeholder': 'Your message...',
+                'placeholder': _('Your message...'),
                 'class': 'contact-input',
             }),
         }
         labels = {
-            'name': 'Name',
-            'phone': 'Phone Number',
-            'subject': 'Subject',
-            'message': 'Message',
+            'name': _('Name'),
+            'phone': _('Phone Number'),
+            'subject': _('Subject'),
+            'message': _('Message'),
         }

@@ -1,4 +1,5 @@
 from django import forms
+from django.utils.translation import gettext_lazy as _
 from .models import Registration
 
 
@@ -11,37 +12,37 @@ class RegistrationForm(forms.ModelForm):
         widgets = {
             'full_name': forms.TextInput(attrs={
                 'class': 'form-input',
-                'placeholder': 'Enter your full name',
+                'placeholder': _('Enter your full name'),
                 'required': True
             }),
             'email': forms.EmailInput(attrs={
                 'class': 'form-input',
-                'placeholder': 'Enter your email',
+                'placeholder': _('Enter your email'),
                 'required': True
             }),
             'phone': forms.TextInput(attrs={
                 'class': 'form-input',
-                'placeholder': 'Enter your phone number',
+                'placeholder': _('Enter your phone number'),
                 'required': True
             }),
             'note': forms.Textarea(attrs={
                 'class': 'form-textarea',
-                'placeholder': 'Any additional notes (optional)',
+                'placeholder': _('Any additional notes (optional)'),
                 'rows': 4
             }),
         }
         labels = {
-            'full_name': 'Full Name',
-            'email': 'Email Address',
-            'phone': 'Phone Number',
-            'note': 'Additional Note',
+            'full_name': _('Full Name'),
+            'email': _('Email Address'),
+            'phone': _('Phone Number'),
+            'note': _('Additional Note'),
         }
 
     def clean_phone(self):
         """Validate phone number"""
         phone = self.cleaned_data.get('phone')
         if phone and len(phone) < 9:
-            raise forms.ValidationError("Please enter a valid phone number")
+            raise forms.ValidationError(_("Please enter a valid phone number"))
         return phone
 
     def clean_email(self):
