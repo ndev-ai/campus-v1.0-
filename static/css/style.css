@@ -1059,7 +1059,7 @@ body {
 .news-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 60px rgba(132, 204, 22, 0.15);
-    border-color: rgba(132, 204, 22, 0.3);
+    border-color: #84cc16;
 }
 
 .news-image {
@@ -2287,7 +2287,7 @@ textarea.contact-input {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 30px;
     margin-bottom: 60px;
 }
@@ -2767,13 +2767,70 @@ textarea.contact-input {
 }
 
 @media (max-width: 768px) {
+    .static-page-section {
+        padding: 60px 20px;
+    }
+
+    .page-header {
+        margin-bottom: 40px;
+    }
+
     .page-title {
         font-size: 32px;
+        margin-bottom: 12px;
+    }
+
+    .page-subtitle {
+        font-size: 14px;
+    }
+
+    .section-tag {
+        font-size: 12px;
+        padding: 6px 12px;
     }
 
     .faq-item,
     .content-block {
         padding: 20px;
+        margin-bottom: 16px;
+    }
+
+    .faq-question,
+    .content-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .faq-answer,
+    .content-text {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .faq-container {
+        margin-bottom: 40px;
+    }
+
+    .page-cta {
+        padding: 40px 20px;
+        margin-top: 40px;
+    }
+
+    .page-cta .cta-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .error-code {
+        font-size: 120px;
+    }
+
+    .error-title {
+        font-size: 28px;
+    }
+
+    .error-message {
+        font-size: 15px;
     }
 }
 

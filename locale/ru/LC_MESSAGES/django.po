@@ -405,3 +405,142 @@ msgstr "Все новости"
 
 msgid "View All"
 msgstr "Смотреть все"
+
+# 404 Error Page
+msgid "404 - Page Not Found"
+msgstr "404 - Страница не найдена"
+
+msgid "Page Not Found"
+msgstr "Страница не найдена"
+
+msgid "The page you're looking for doesn't exist or has been moved. Let's get you back on track."
+msgstr "Страница, которую вы ищете, не существует или была перемещена. Давайте вернем вас на правильный путь."
+
+msgid "Go Home"
+msgstr "На главную"
+
+msgid "Go Back"
+msgstr "Назад"
+
+msgid "Quick Links:"
+msgstr "Быстрые ссылки:"
+
+# FAQ Page
+msgid "Help Center"
+msgstr "Центр помощи"
+
+msgid "Frequently Asked Questions"
+msgstr "Часто задаваемые вопросы"
+
+msgid "Find answers to common questions about Green Campus Initiative"
+msgstr "Найдите ответы на часто задаваемые вопросы о Green Campus Initiative"
+
+msgid "What is Green Campus Initiative?"
+msgstr "Что такое Green Campus Initiative?"
+
+msgid "Green Campus Initiative is a comprehensive program aimed at transforming university campuses into sustainable, environmentally-friendly spaces through various ecological projects and community engagement."
+msgstr "Green Campus Initiative — это комплексная программа, направленная на превращение университетских кампусов в устойчивые, экологически чистые пространства через различные экологические проекты и вовлечение сообщества."
+
+msgid "How can I participate?"
+msgstr "Как я могу участвовать?"
+
+msgid "You can participate by joining our volunteer programs, attending events, or partnering with us. Visit our Contact page to get started."
+msgstr "Вы можете участвовать, присоединившись к нашим волонтерским программам, посещая мероприятия или сотрудничая с нами. Посетите нашу страницу Контакты, чтобы начать."
+
+msgid "Are the events free to attend?"
+msgstr "Мероприятия бесплатные?"
+
+msgid "Most of our events are free and open to all students, faculty, and community members. Some specialized workshops may require registration."
+msgstr "Большинство наших мероприятий бесплатны и открыты для всех студентов, преподавателей и членов сообщества. Некоторые специализированные семинары могут требовать регистрации."
+
+msgid "How is the initiative funded?"
+msgstr "Как финансируется инициатива?"
+
+msgid "We receive funding through university partnerships, grants, corporate sponsorships, and community donations. All funds are transparently managed for environmental projects."
+msgstr "Мы получаем финансирование через университетские партнерства, гранты, корпоративные спонсорства и пожертвования сообщества. Все средства прозрачно управляются для экологических проектов."
+
+msgid "Can other universities join?"
+msgstr "Могут ли другие университеты присоединиться?"
+
+msgid "Yes! We welcome partnerships with universities across the region. Contact us to discuss how we can collaborate."
+msgstr "Да! Мы приветствуем партнерство с университетами по всему региону. Свяжитесь с нами, чтобы обсудить, как мы можем сотрудничать."
+
+msgid "What impact have you achieved so far?"
+msgstr "Каких результатов вы достигли?"
+
+msgid "We've implemented 89+ eco-projects, reduced carbon emissions by 47%, planted 2.3M trees, and engaged over 12,000 active participants across partner universities."
+msgstr "Мы реализовали 89+ эко-проектов, сократили выбросы углерода на 47%, посадили 2,3 млн деревьев и привлекли более 12 000 активных участников в партнерских университетах."
+
+msgid "Still have questions?"
+msgstr "Остались вопросы?"
+
+# Privacy Policy Page
+msgid "Legal"
+msgstr "Юридическая информация"
+
+msgid "Last updated: January 2026"
+msgstr "Последнее обновление: Январь 2026"
+
+msgid "Information We Collect"
+msgstr "Информация, которую мы собираем"
+
+msgid "When you register for events or contact us, we collect personal information such as your name, email address, and phone number. This information is used solely to communicate with you about our programs and events."
+msgstr "Когда вы регистрируетесь на мероприятия или связываетесь с нами, мы собираем личную информацию, такую как ваше имя, адрес электронной почты и номер телефона. Эта информация используется исключительно для связи с вами о наших программах и мероприятиях."
+
+msgid "How We Use Your Information"
+msgstr "Как мы используем вашу информацию"
+
+msgid "We use your information to send event notifications, program updates, and important announcements. We never sell or share your personal data with third parties without your explicit consent."
+msgstr "Мы используем вашу информацию для отправки уведомлений о мероприятиях, обновлений программ и важных объявлений. Мы никогда не продаем и не передаем ваши личные данные третьим лицам без вашего явного согласия."
+
+msgid "Data Security"
+msgstr "Безопасность данных"
+
+msgid "We implement appropriate security measures to protect your personal information. All data is stored securely and accessed only by authorized personnel."
+msgstr "Мы применяем соответствующие меры безопасности для защиты вашей личной информации. Все данные хранятся надежно и доступны только авторизованному персоналу."
+
+msgid "Your Rights"
+msgstr "Ваши права"
+
+msgid "You have the right to access, correct, or delete your personal information at any time. Contact us if you wish to exercise these rights."
+msgstr "Вы имеете право в любое время получить доступ, исправить или удалить вашу личную информацию. Свяжитесь с нами, если хотите воспользоваться этими правами."
+
+msgid "For privacy-related questions, please contact us at"
+msgstr "По вопросам конфиденциальности свяжитесь с нами по адресу:"
+
+# Terms of Use Page
+msgid "Acceptance of Terms"
+msgstr "Принятие условий"
+
+msgid "By accessing and using this website, you accept and agree to be bound by these Terms of Use. If you do not agree, please discontinue use immediately."
+msgstr "Получая доступ и используя этот веб-сайт, вы принимаете и соглашаетесь соблюдать эти Условия использования. Если вы не согласны, пожалуйста, немедленно прекратите использование."
+
+msgid "Use of Website"
+msgstr "Использование веб-сайта"
+
+msgid "This website is provided for informational purposes about Green Campus Initiative programs, events, and activities. You may not use this site for any illegal or unauthorized purpose."
+msgstr "Этот веб-сайт предоставляется в информационных целях о программах, мероприятиях и деятельности Green Campus Initiative. Вы не можете использовать этот сайт для любых незаконных или несанкционированных целей."
+
+msgid "Intellectual Property"
+msgstr "Интеллектуальная собственность"
+
+msgid "All content on this website, including text, graphics, logos, and images, is the property of Green Campus Initiative and protected by copyright laws."
+msgstr "Весь контент на этом веб-сайте, включая текст, графику, логотипы и изображения, является собственностью Green Campus Initiative и защищен законами об авторском праве."
+
+msgid "Event Registration"
+msgstr "Регистрация на мероприятие"
+
+msgid "When registering for events, you agree to provide accurate information. We reserve the right to cancel registrations that violate our policies."
+msgstr "При регистрации на мероприятия вы соглашаетесь предоставить точную информацию. Мы оставляем за собой право отменять регистрации, нарушающие наши правила."
+
+msgid "Limitation of Liability"
+msgstr "Ограничение ответственности"
+
+msgid "Green Campus Initiative is not liable for any damages arising from the use of this website or participation in our programs."
+msgstr "Green Campus Initiative не несет ответственности за любой ущерб, возникший в результате использования этого веб-сайта или участия в наших программах."
+
+msgid "Changes to Terms"
+msgstr "Изменения в условиях"
+
+msgid "We reserve the right to modify these terms at any time. Continued use of the website constitutes acceptance of updated terms."
+msgstr "Мы оставляем за собой право изменять эти условия в любое время. Продолжение использования веб-сайта означает принятие обновленных условий."

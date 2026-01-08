@@ -405,3 +405,142 @@ msgstr "Barcha yangiliklar"
 
 msgid "View All"
 msgstr "Hammasini ko'rish"
+
+# 404 Error Page
+msgid "404 - Page Not Found"
+msgstr "404 - Sahifa topilmadi"
+
+msgid "Page Not Found"
+msgstr "Sahifa topilmadi"
+
+msgid "The page you're looking for doesn't exist or has been moved. Let's get you back on track."
+msgstr "Siz qidirayotgan sahifa mavjud emas yoki ko'chirilgan. Keling, sizni to'g'ri yo'lga qaytaraylik."
+
+msgid "Go Home"
+msgstr "Bosh sahifaga"
+
+msgid "Go Back"
+msgstr "Orqaga qaytish"
+
+msgid "Quick Links:"
+msgstr "Tezkor havolalar:"
+
+# FAQ Page
+msgid "Help Center"
+msgstr "Yordam markazi"
+
+msgid "Frequently Asked Questions"
+msgstr "Tez-tez so'raladigan savollar"
+
+msgid "Find answers to common questions about Green Campus Initiative"
+msgstr "Yashil Kampus Tashabbusi haqida umumiy savollarga javoblar toping"
+
+msgid "What is Green Campus Initiative?"
+msgstr "Yashil Kampus Tashabbusi nima?"
+
+msgid "Green Campus Initiative is a comprehensive program aimed at transforming university campuses into sustainable, environmentally-friendly spaces through various ecological projects and community engagement."
+msgstr "Yashil Kampus Tashabbusi turli ekologik loyihalar va jamoat ishtiroki orqali universitet kampuslarini barqaror, ekologik toza maydonchalarga aylantirish maqsadida yaratilgan kompleks dasturdir."
+
+msgid "How can I participate?"
+msgstr "Qanday ishtirok eta olaman?"
+
+msgid "You can participate by joining our volunteer programs, attending events, or partnering with us. Visit our Contact page to get started."
+msgstr "Siz ko'ngillilar dasturlarimizga qo'shilib, tadbirlarda qatnashib yoki biz bilan hamkorlik qilish orqali ishtirok eta olasiz. Boshlash uchun Aloqa sahifamizga tashrif buyuring."
+
+msgid "Are the events free to attend?"
+msgstr "Tadbirlar bepulmi?"
+
+msgid "Most of our events are free and open to all students, faculty, and community members. Some specialized workshops may require registration."
+msgstr "Ko'pgina tadbirlarimiz barcha talabalar, o'qituvchilar va jamiyat a'zolari uchun bepul va ochiq. Ba'zi maxsus seminarlar ro'yxatdan o'tishni talab qilishi mumkin."
+
+msgid "How is the initiative funded?"
+msgstr "Tashabbusni qanday moliyalashtirish?"
+
+msgid "We receive funding through university partnerships, grants, corporate sponsorships, and community donations. All funds are transparently managed for environmental projects."
+msgstr "Biz universitet hamkorliklari, grantlar, korporativ homiylik va jamoat xayr-ehsonlari orqali moliyalashtirilamiz. Barcha mablag'lar ekologik loyihalar uchun shaffof boshqariladi."
+
+msgid "Can other universities join?"
+msgstr "Boshqa universitetlar qo'shilishi mumkinmi?"
+
+msgid "Yes! We welcome partnerships with universities across the region. Contact us to discuss how we can collaborate."
+msgstr "Ha! Biz mintaqadagi universitetlar bilan hamkorlikni mamnuniyat bilan qabul qilamiz. Qanday hamkorlik qilishimiz haqida gaplashish uchun biz bilan bog'laning."
+
+msgid "What impact have you achieved so far?"
+msgstr "Hozirgacha qanday natijalarga erishdingiz?"
+
+msgid "We've implemented 89+ eco-projects, reduced carbon emissions by 47%, planted 2.3M trees, and engaged over 12,000 active participants across partner universities."
+msgstr "Biz 89+ eko-loyihani amalga oshirdik, uglerod emissiyasini 47% ga qisqartirdik, 2.3M daraxt ekdik va hamkor universitetlarda 12,000 dan ortiq faol ishtirokchilarni jalb qildik."
+
+msgid "Still have questions?"
+msgstr "Hali ham savollaringiz bormi?"
+
+# Privacy Policy Page
+msgid "Legal"
+msgstr "Huquqiy"
+
+msgid "Last updated: January 2026"
+msgstr "Oxirgi yangilanish: Yanvar 2026"
+
+msgid "Information We Collect"
+msgstr "Biz to'playdigan ma'lumotlar"
+
+msgid "When you register for events or contact us, we collect personal information such as your name, email address, and phone number. This information is used solely to communicate with you about our programs and events."
+msgstr "Tadbirlarga ro'yxatdan o'tganingizda yoki biz bilan bog'langaningizda, biz ismingiz, elektron pochta manzilingiz va telefon raqamingiz kabi shaxsiy ma'lumotlarni yig'amiz. Bu ma'lumotlar faqat dasturlarimiz va tadbirlarimiz haqida siz bilan muloqot qilish uchun ishlatiladi."
+
+msgid "How We Use Your Information"
+msgstr "Ma'lumotlaringizni qanday ishlatamiz"
+
+msgid "We use your information to send event notifications, program updates, and important announcements. We never sell or share your personal data with third parties without your explicit consent."
+msgstr "Biz sizning ma'lumotlaringizni tadbir xabar barlari, dastur yangilanishlari va muhim e'lonlarni yuborish uchun ishlatamiz. Biz sizning aniq roziligingiz bo'lmasa, shaxsiy ma'lumotlaringizni hech qachon sotmaymiz yoki uchinchi shaxslar bilan baham ko'rmaymiz."
+
+msgid "Data Security"
+msgstr "Ma'lumotlar xavfsizligi"
+
+msgid "We implement appropriate security measures to protect your personal information. All data is stored securely and accessed only by authorized personnel."
+msgstr "Biz shaxsiy ma'lumotlaringizni himoya qilish uchun tegishli xavfsizlik choralarini ko'ramiz. Barcha ma'lumotlar xavfsiz saqlanadi va faqat vakolatlangan xodimlar tomonidan ochiladi."
+
+msgid "Your Rights"
+msgstr "Sizning huquqlaringiz"
+
+msgid "You have the right to access, correct, or delete your personal information at any time. Contact us if you wish to exercise these rights."
+msgstr "Siz istalgan vaqtda shaxsiy ma'lumotlaringizga kirish, ularni to'g'rilash yoki o'chirish huquqiga egasiz. Ushbu huquqlardan foydalanmoqchi bo'lsangiz, biz bilan bog'laning."
+
+msgid "For privacy-related questions, please contact us at"
+msgstr "Maxfiylik bilan bog'liq savollar uchun biz bilan bog'laning:"
+
+# Terms of Use Page
+msgid "Acceptance of Terms"
+msgstr "Shartlarni qabul qilish"
+
+msgid "By accessing and using this website, you accept and agree to be bound by these Terms of Use. If you do not agree, please discontinue use immediately."
+msgstr "Ushbu veb-saytga kirib, siz ushbu Foydalanish shartlarini qabul qilasiz va ularga rioya qilishga rozisiz. Agar rozi bo'lmasangiz, iltimos, foydalanishni darhol to'xtating."
+
+msgid "Use of Website"
+msgstr "Veb-saytdan foydalanish"
+
+msgid "This website is provided for informational purposes about Green Campus Initiative programs, events, and activities. You may not use this site for any illegal or unauthorized purpose."
+msgstr "Ushbu veb-sayt Yashil Kampus Tashabbusi dasturlari, tadbirlari va faoliyati haqida ma'lumot berish maqsadida taqdim etilgan. Siz ushbu saytni qonunga xilof yoki ruxsatsiz maqsadlarda ishlatmaysiz."
+
+msgid "Intellectual Property"
+msgstr "Intellektual mulk"
+
+msgid "All content on this website, including text, graphics, logos, and images, is the property of Green Campus Initiative and protected by copyright laws."
+msgstr "Ushbu veb-saytdagi barcha kontent, jumladan, matn, grafika, logotiplar va rasmlar Yashil Kampus Tashabbusining mulki bo'lib, mualliflik huquqi qonunlari bilan himoyalangan."
+
+msgid "Event Registration"
+msgstr "Tadbirga ro'yxatdan o'tish"
+
+msgid "When registering for events, you agree to provide accurate information. We reserve the right to cancel registrations that violate our policies."
+msgstr "Tadbirlarga ro'yxatdan o'tganingizda, to'g'ri ma'lumot berishga rozilik bildirasiz. Biz siyosatimizni buzgan ro'yxatdan o'tishlarni bekor qilish huquqini o'zimizda saqlaymiz."
+
+msgid "Limitation of Liability"
+msgstr "Javobgarlikning cheklanishi"
+
+msgid "Green Campus Initiative is not liable for any damages arising from the use of this website or participation in our programs."
+msgstr "Yashil Kampus Tashabbusi ushbu veb-saytdan foydalanish yoki bizning dasturlarimizda ishtirok etishdan kelib chiqadigan har qanday zarar uchun javobgar emas."
+
+msgid "Changes to Terms"
+msgstr "Shartlarga o'zgartirishlar"
+
+msgid "We reserve the right to modify these terms at any time. Continued use of the website constitutes acceptance of updated terms."
+msgstr "Biz ushbu shartlarni istalgan vaqtda o'zgartirish huquqini o'zimizda saqlaymiz. Veb-saytdan davom etib foydalanish yangilangan shartlarni qabul qilishni bildiradi."
