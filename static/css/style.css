@@ -259,27 +259,24 @@ body {
 /* Mobile language selector */
 @media (max-width: 768px) {
     .lang-selector {
-        width: 100%;
-        margin-top: 12px;
-        padding-top: 12px;
-        border-top: 1px solid rgba(132, 204, 22, 0.1);
+        order: 2;
     }
 
     .lang-btn {
-        width: 100%;
-        justify-content: center;
+        padding: 8px 12px;
+    }
+
+    .lang-btn-text {
+        display: none;
+    }
+
+    .lang-btn .icon:last-child {
+        display: none;
     }
 
     .lang-dropdown {
-        position: relative;
-        top: 0;
-        margin-top: 12px;
-        box-shadow: none;
-        border: 1px solid rgba(132, 204, 22, 0.2);
-    }
-
-    .lang-dropdown.open {
-        display: block;
+        right: 0;
+        left: auto;
     }
 }
 
@@ -1867,10 +1864,27 @@ body {
 @media (max-width: 768px) {
     .nav-content {
         padding: 0 20px;
+        justify-content: space-between;
+    }
+
+    .nav-content .logo {
+        order: 1;
+        flex: 1;
+    }
+
+    .nav-content .logo .logo-icon-wrap {
+        width: 60px;
+        height: 60px;
+    }
+
+    .nav-content .logo .logo-img {
+        width: 60px;
+        height: 60px;
     }
 
     .mobile-menu-toggle {
         display: block;
+        order: 3;
     }
 
     .nav-links {
@@ -1903,6 +1917,10 @@ body {
         padding: 12px 0;
         font-size: 18px;
         border-bottom: 1px solid rgba(132, 204, 22, 0.1);
+    }
+
+    .join-btn-desktop {
+        display: none;
     }
 
     .join-btn {
@@ -2904,12 +2922,19 @@ textarea.contact-input {
 .partners-carousel {
     display: flex;
     gap: 60px;
-    animation: scroll-partners 40s linear infinite;
+    animation: scroll-partners 30s linear infinite;
     width: fit-content;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: pan-x;
 }
 
 .partners-carousel:hover {
     animation-play-state: paused;
+}
+
+.partners-carousel:active {
+    cursor: grabbing;
 }
 
 @keyframes scroll-partners {
@@ -2956,12 +2981,11 @@ textarea.contact-input {
     width: auto;
     height: auto;
     object-fit: contain;
-    filter: grayscale(100%) opacity(0.7);
     transition: all 0.3s ease;
 }
 
 .partner-link:hover .partner-logo {
-    filter: grayscale(0%) opacity(1);
+    transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
