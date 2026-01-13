@@ -259,24 +259,23 @@ body {
 /* Mobile language selector */
 @media (max-width: 768px) {
     .lang-selector {
-        order: 2;
+        width: 100%;
+        margin-top: 12px;
+        padding-top: 12px;
+        border-top: 1px solid rgba(132, 204, 22, 0.1);
     }
 
     .lang-btn {
-        padding: 8px 12px;
-    }
-
-    .lang-btn-text {
-        display: none;
-    }
-
-    .lang-btn .icon:last-child {
-        display: none;
+        width: 100%;
+        justify-content: center;
     }
 
     .lang-dropdown {
-        right: 0;
-        left: auto;
+        position: relative;
+        top: 0;
+        margin-top: 12px;
+        box-shadow: none;
+        border: 1px solid rgba(132, 204, 22, 0.2);
     }
 }
 
@@ -1917,10 +1916,6 @@ body {
         padding: 12px 0;
         font-size: 18px;
         border-bottom: 1px solid rgba(132, 204, 22, 0.1);
-    }
-
-    .join-btn-desktop {
-        display: none;
     }
 
     .join-btn {
