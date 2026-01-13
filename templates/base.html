@@ -31,12 +31,11 @@
         <!-- Navigation -->
         <nav class="nav" id="nav">
             <div class="nav-content">
-                <div class="logo">
+                <a href="{% url 'core:home' %}" class="logo">
                     <div class="logo-icon-wrap">
                         <img src="{% static 'img/logo.png' %}" alt="Green Campus Logo" class="logo-img">
                     </div>
-                    <span class="logo-text">Green Campus</span>
-                </div>
+                </a>
                 <button class="mobile-menu-toggle" id="mobileMenuToggle">
                     <div class="hamburger">
                         <span></span>
@@ -45,7 +44,6 @@
                     </div>
                 </button>
                 <div class="nav-links" id="navLinks">
-                    <a href="{% url 'core:home' %}" class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">{% trans "Home" %}</a>
                     <a href="{% url 'core:about' %}" class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">{% trans "About" %}</a>
                     <a href="{% url 'programs:list' %}" class="nav-link {% if 'programs' in request.resolver_match.namespace %}active{% endif %}">{% trans "Programs" %}</a>
                     <a href="{% url 'news:list' %}" class="nav-link {% if 'news' in request.resolver_match.namespace %}active{% endif %}">{% trans "News" %}</a>
