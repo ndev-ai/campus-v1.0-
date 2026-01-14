@@ -2959,15 +2959,13 @@ textarea.contact-input {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 180px;
-    height: 100px;
+    height: 70px;
 }
 
 .partner-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
     height: 100%;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -2978,8 +2976,8 @@ textarea.contact-input {
 }
 
 .partner-logo {
-    width: 100%;
     height: 100%;
+    width: auto;
     object-fit: contain;
     transition: all 0.3s ease;
 }
@@ -2998,8 +2996,7 @@ textarea.contact-input {
     }
 
     .partner-item {
-        width: 140px;
-        height: 80px;
+        height: 50px;
     }
 
     .partners-carousel-wrapper::before,
