@@ -30,7 +30,6 @@ urlpatterns += i18n_patterns(
     path('programs/', include('programs.urls')),
     path('news/', include('news.urls')),
     path('events/', include('events.urls')),
-    path('team/', include('team.urls')),
     path('contact/', include('contact.urls')),
     path('gallery/', include('gallery.urls')),
     prefix_default_language=False,
