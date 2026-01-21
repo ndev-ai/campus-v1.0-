@@ -126,6 +126,21 @@ body {
     object-fit: contain;
 }
 
+/* Logo Carousel */
+.logo-carousel {
+    position: relative;
+}
+.logo-carousel .logo-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+.logo-carousel .logo-slide.active {
+    opacity: 1;
+}
+
 .logo-icon-wrap {
     display: flex;
     align-items: center;

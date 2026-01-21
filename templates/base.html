@@ -32,8 +32,9 @@
         <nav class="nav" id="nav">
             <div class="nav-content">
                 <a href="{% url 'core:home' %}" class="logo">
-                    <div class="logo-icon-wrap">
-                        <img src="{% static 'img/logo.png' %}" alt="Green Campus Logo" class="logo-img">
+                    <div class="logo-icon-wrap logo-carousel" id="logoCarousel">
+                        <img src="{% static 'img/logo.png' %}" alt="Green Campus Logo" class="logo-img logo-slide active">
+                        <img src="{% static 'img/logo.jpg' %}" alt="Green Campus Logo" class="logo-img logo-slide">
                     </div>
                     <span class="logo-text-mobile">Green Campus</span>
                 </a>
