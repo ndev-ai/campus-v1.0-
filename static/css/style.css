@@ -1861,7 +1861,24 @@ body {
     }
 }
 
+/* Desktop/Mobile visibility */
+.mobile-only {
+    display: none;
+}
+
+.desktop-only {
+    display: flex;
+}
+
 @media (max-width: 768px) {
+    .mobile-only {
+        display: flex;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
     .nav-content {
         padding: 0 16px;
         justify-content: space-between;
@@ -1883,10 +1900,6 @@ body {
     .mobile-menu-toggle {
         display: block;
         order: 3;
-    }
-
-    .nav-content > .join-btn {
-        display: none;
     }
 
     .nav-links {
@@ -1920,6 +1933,12 @@ body {
         font-size: 16px;
         text-align: center;
         border-bottom: 1px solid rgba(132, 204, 22, 0.1);
+    }
+
+    .nav-links .join-btn.mobile-only {
+        width: 100%;
+        justify-content: center;
+        margin-top: 8px;
     }
 
     .hero-stats {
