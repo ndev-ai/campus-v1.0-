@@ -1602,18 +1602,20 @@ body {
 .footer-logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
     margin-bottom: 20px;
 }
 
-.footer-logo .logo-icon-wrap {
-    width: 72px;
-    height: 72px;
+.footer-logo .logo-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .footer-logo .logo-img {
-    width: 72px;
-    height: 72px;
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
 }
 
 .footer-logo-text {
