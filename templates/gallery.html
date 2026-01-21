@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
-{% load static i18n %}
+{% load static %}
 
-{% block title %}{% trans "Gallery" %} - {% trans "Green Campus Initiative" %}{% endblock %}
+{% block title %}Gallery - Green Campus Initiative{% endblock %}
 
 {% block content %}
 <!-- Gallery Section -->
@@ -9,10 +9,10 @@
     <div class="section-content">
         <!-- Header -->
         <div class="gallery-header">
-            <span class="section-tag">{% trans "Our Gallery" %}</span>
-            <h1 class="section-title gallery-title">{% trans "Moments That Inspire" %}</h1>
+            <span class="section-tag">Our Gallery</span>
+            <h1 class="section-title gallery-title">Moments That Inspire</h1>
             <p class="about-paragraph gallery-description">
-                {% trans "Explore the journey of Green Campus Initiative through powerful visuals. From campus transformations to community achievements, every image tells a story of positive change." %}
+                Explore the journey of Green Campus Initiative through powerful visuals. From campus transformations to community achievements, every image tells a story of positive change.
             </p>
         </div>
 
@@ -24,7 +24,7 @@
                 <!-- Image -->
                 <div class="gallery-image-container">
                     {% if image.image %}
-                    <img src="{{ image.image.url }}" alt="{% trans 'Gallery image' %}" class="gallery-image">
+                    <img src="{{ image.image.url }}" alt="Gallery image" class="gallery-image">
                     {% else %}
                     <div class="gallery-image-placeholder">
                         <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
@@ -49,8 +49,8 @@
                 <circle cx="9" cy="9" r="2"/>
                 <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
             </svg>
-            <h3 class="gallery-empty-title">{% trans "No Images Found" %}</h3>
-            <p class="gallery-empty-text">{% trans "No images have been added to the gallery yet." %}</p>
+            <h3 class="gallery-empty-title">No Images Found</h3>
+            <p class="gallery-empty-text">No images have been added to the gallery yet.</p>
         </div>
         {% endif %}
     </div>
