@@ -109,6 +109,7 @@ body {
     align-items: center;
     text-decoration: none;
     flex-shrink: 0;
+    gap: 16px;
 }
 
 .logo-icons {
@@ -118,8 +119,8 @@ body {
 }
 
 .logo .logo-img {
-    width: 70px;
-    height: 70px;
+    width: 85px;
+    height: 85px;
     object-fit: contain;
 }
 
@@ -128,8 +129,9 @@ body {
 }
 
 .logo-text {
+    display: block;
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 700;
     letter-spacing: -0.5px;
     color: #1a1a2e;
