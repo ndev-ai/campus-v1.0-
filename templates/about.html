@@ -4,326 +4,68 @@
 {% block title %}About Us - Green Campus Initiative{% endblock %}
 
 {% block content %}
-<!-- Hero Section -->
-<section class="about-hero">
+<!-- About Page -->
+<section class="about-page">
     <div class="section-content">
-        <span class="section-tag">About Us</span>
-        <h1 class="hero-title">
-            <span>Transforming </span>
-            <span class="hero-highlight">Universities </span>
-            <br><span>Into Sustainable Ecosystems</span>
-        </h1>
-        <p class="hero-subtitle">Since 2018, Green Campus Initiative has been at the forefront of environmental sustainability in higher education across Uzbekistan.</p>
-    </div>
-</section>
-
-<!-- Mission & Vision Section -->
-<section class="about-section" id="mission">
-    <div class="section-content">
-        <div class="about-grid">
-            <div class="about-text">
-                <span class="section-tag">Our Mission</span>
-                <h2 class="section-title">Creating a Culture of Sustainable Development</h2>
-                <p class="about-paragraph">Our mission goes beyond greening campus territories. We aim to cultivate environmental consciousness among future leaders, embedding sustainability into the core of higher education.</p>
-                <p class="about-paragraph">We believe that universities are the birthplace of ideas that shape society. By transforming campuses into models of environmental responsibility, we inspire students to become agents of change in their communities and careers.</p>
-                <div class="about-values">
-                    <div class="value-item">
-                        <div class="value-icon-wrap">
-                            <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10"/>
-                                <circle cx="12" cy="12" r="6"/>
-                                <circle cx="12" cy="12" r="2"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4 class="value-title">Science & Innovation</h4>
-                            <p class="value-desc">Research-based solutions for real environmental challenges</p>
-                        </div>
-                    </div>
-                    <div class="value-item">
-                        <div class="value-icon-wrap">
-                            <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="m11 17 2 2a1 1 0 1 0 3-3"/>
-                                <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/>
-                                <path d="m21 3 1 11h-2"/>
-                                <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/>
-                                <path d="M3 4h8"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4 class="value-title">Community</h4>
-                            <p class="value-desc">Uniting activists, students, and educators nationwide</p>
-                        </div>
-                    </div>
-                    <div class="value-item">
-                        <div class="value-icon-wrap">
-                            <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M7 20h10"/>
-                                <path d="M10 20c5.5-2.5.8-6.4 3-10"/>
-                                <path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/>
-                                <path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4 class="value-title">Sustainability</h4>
-                            <p class="value-desc">Long-term solutions for lasting environmental impact</p>
-                        </div>
-                    </div>
+        <div class="about-page-grid">
+            <!-- Left: Image -->
+            <div class="about-page-image">
+                <div class="about-image-wrapper">
+                    <img src="{% static 'img/volunteer.jpg' %}" alt="Green Campus volunteers planting trees" class="about-main-image">
+                    <div class="about-image-overlay"></div>
+                </div>
+                <div class="about-stats-badge">
+                    <span class="badge-number">47+</span>
+                    <span class="badge-text">Partner Universities</span>
                 </div>
             </div>
-            <div class="about-visual">
-                <div class="image-card">
-                    <div class="image-placeholder">
-                        <div class="image-pattern"></div>
-                        <div class="image-icon-wrap">
-                            <img src="{% static 'img/volunteer.jpg' %}" alt="Our volunteers in action" class="action-image">
-                        </div>
-                    </div>
+
+            <!-- Right: Content -->
+            <div class="about-page-content">
+                <span class="section-tag">About Us</span>
+                <h1 class="about-page-title">Building a Sustainable Future Through Education</h1>
+
+                <div class="about-text-content">
+                    <p>Green Campus Initiative was founded in 2018 by a group of passionate environmental science students at the National University of Uzbekistan. What started as a small tree-planting campaign has grown into a nationwide movement transforming how universities approach environmental sustainability.</p>
+
+                    <p>Our mission is to create a culture of environmental responsibility within higher education institutions. We believe that universities are not just places of learning - they are communities that can model sustainable practices and inspire the next generation of environmental leaders.</p>
+
+                    <p>Today, we work with over 47 universities across Uzbekistan, engaging more than 12,000 active volunteers in projects ranging from campus greening and waste management to renewable energy initiatives and environmental education programs.</p>
+
+                    <p>Our approach combines scientific research with practical action. We develop evidence-based solutions tailored to each campus's unique needs, ensuring that our initiatives create lasting impact rather than temporary improvements.</p>
                 </div>
-                <div class="floating-card">
-                    <div class="floating-icon-wrap">
-                        <svg class="icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
-                            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
-                            <path d="M4 22h16"/>
-                            <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
-                            <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
-                            <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/>
+
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
                         </svg>
+                        <span>50,000+ trees planted since 2018</span>
                     </div>
-                    <span class="floating-text">"Green Campus of the Year" Award 2024</span>
+                    <div class="highlight-item">
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <span>89 environmental projects completed</span>
+                    </div>
+                    <div class="highlight-item">
+                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <span>"Green Campus of the Year" Award 2024</span>
+                    </div>
                 </div>
-                <div class="decor-circle-1"></div>
-                <div class="decor-circle-2"></div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- Statistics Section -->
-<section class="stats-section">
-    <div class="section-content">
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-icon-wrap">
-                    <svg class="icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-                        <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-                    </svg>
-                </div>
-                <span class="stat-number">47</span>
-                <span class="stat-label">Partner Universities</span>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon-wrap">
-                    <svg class="icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                        <circle cx="9" cy="7" r="4"/>
-                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                    </svg>
-                </div>
-                <span class="stat-number">12,000+</span>
-                <span class="stat-label">Active Volunteers</span>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon-wrap">
-                    <svg class="icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M7 20h10"/>
-                        <path d="M10 20c5.5-2.5.8-6.4 3-10"/>
-                        <path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/>
-                        <path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/>
-                    </svg>
-                </div>
-                <span class="stat-number">50,000+</span>
-                <span class="stat-label">Trees Planted</span>
-            </div>
-            <div class="stat-card">
-                <div class="stat-icon-wrap">
-                    <svg class="icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
-                        <path d="m9 12 2 2 4-4"/>
-                    </svg>
-                </div>
-                <span class="stat-number">89</span>
-                <span class="stat-label">Completed Projects</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Our Story / Timeline Section -->
-<section class="timeline-section">
-    <div class="section-content">
-        <div class="timeline-header">
-            <span class="section-tag">Our Journey</span>
-            <h2 class="section-title">From Idea to National Movement</h2>
-            <p class="section-subtitle">Key milestones in our mission to transform Uzbekistan's campuses</p>
-        </div>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-marker">
-                    <div class="timeline-dot"></div>
-                </div>
-                <div class="timeline-content">
-                    <span class="timeline-year">2018</span>
-                    <h3 class="timeline-title">The Beginning</h3>
-                    <p class="timeline-desc">Green Campus Initiative was founded by a group of environmental science students at National University of Uzbekistan with a vision to make campuses greener.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-marker">
-                    <div class="timeline-dot"></div>
-                </div>
-                <div class="timeline-content">
-                    <span class="timeline-year">2019</span>
-                    <h3 class="timeline-title">First Major Project</h3>
-                    <p class="timeline-desc">Launched our first campus-wide recycling program and planted 1,000 trees across 5 university campuses in Tashkent.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-marker">
-                    <div class="timeline-dot"></div>
-                </div>
-                <div class="timeline-content">
-                    <span class="timeline-year">2020</span>
-                    <h3 class="timeline-title">National Recognition</h3>
-                    <p class="timeline-desc">Received government support and expanded to 15 universities across Uzbekistan. Launched online environmental education programs.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-marker">
-                    <div class="timeline-dot"></div>
-                </div>
-                <div class="timeline-content">
-                    <span class="timeline-year">2022</span>
-                    <h3 class="timeline-title">International Partnerships</h3>
-                    <p class="timeline-desc">Partnered with international environmental organizations and expanded our programs to include renewable energy initiatives.</p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-marker">
-                    <div class="timeline-dot"></div>
-                </div>
-                <div class="timeline-content">
-                    <span class="timeline-year">2024</span>
-                    <h3 class="timeline-title">Award & Growth</h3>
-                    <p class="timeline-desc">Won "Green Campus of the Year" award. Now active in 47 universities with over 12,000 volunteers nationwide.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Team Section -->
-<section class="team-section">
-    <div class="section-content">
-        <div class="team-header">
-            <span class="section-tag">Our Team</span>
-            <h2 class="section-title">Meet the People Behind the Mission</h2>
-            <p class="section-subtitle">Dedicated professionals and passionate volunteers driving environmental change</p>
-        </div>
-        <div class="team-grid">
-            <div class="team-card">
-                <div class="team-avatar">
-                    <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="8" r="5"/>
-                        <path d="M20 21a8 8 0 0 0-16 0"/>
-                    </svg>
-                </div>
-                <h3 class="team-name">Aziz Karimov</h3>
-                <span class="team-role">Executive Director</span>
-                <p class="team-bio">Environmental scientist with 15 years of experience in sustainable development projects across Central Asia.</p>
-            </div>
-            <div class="team-card">
-                <div class="team-avatar">
-                    <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="8" r="5"/>
-                        <path d="M20 21a8 8 0 0 0-16 0"/>
-                    </svg>
-                </div>
-                <h3 class="team-name">Nilufar Rahimova</h3>
-                <span class="team-role">Program Director</span>
-                <p class="team-bio">Former university professor specializing in environmental education and youth engagement programs.</p>
-            </div>
-            <div class="team-card">
-                <div class="team-avatar">
-                    <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="8" r="5"/>
-                        <path d="M20 21a8 8 0 0 0-16 0"/>
-                    </svg>
-                </div>
-                <h3 class="team-name">Sardor Umarov</h3>
-                <span class="team-role">Volunteer Coordinator</span>
-                <p class="team-bio">Passionate community organizer who has mobilized thousands of students for environmental campaigns.</p>
-            </div>
-            <div class="team-card">
-                <div class="team-avatar">
-                    <svg class="icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="8" r="5"/>
-                        <path d="M20 21a8 8 0 0 0-16 0"/>
-                    </svg>
-                </div>
-                <h3 class="team-name">Malika Yusupova</h3>
-                <span class="team-role">Research Lead</span>
-                <p class="team-bio">PhD in Environmental Sciences, leading our research initiatives and impact measurement programs.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Vision Section -->
-<section class="vision-section">
-    <div class="section-content">
-        <div class="vision-grid">
-            <div class="vision-text">
-                <span class="section-tag">Our Vision</span>
-                <h2 class="section-title">A Greener Tomorrow Starts Today</h2>
-                <p class="about-paragraph">We envision a future where every university in Uzbekistan serves as a beacon of environmental responsibility - where sustainability is not just taught in classrooms but practiced in every corner of the campus.</p>
-                <p class="about-paragraph">Our goal for 2030 is to partner with 100 universities, train 50,000 environmental leaders, and reduce campus carbon footprints by 40% across our network.</p>
-                <a href="{% url 'contact:contact' %}" class="primary-btn" style="margin-top: 24px;">
+                <a href="{% url 'contact:contact' %}" class="primary-btn">
                     <span>Join Our Mission</span>
                     <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M5 12h14"/>
                         <path d="m12 5 7 7-7 7"/>
                     </svg>
                 </a>
-            </div>
-            <div class="vision-cards">
-                <div class="vision-card">
-                    <div class="vision-icon-wrap">
-                        <svg class="icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
-                            <path d="M12 6v6l4 2"/>
-                        </svg>
-                    </div>
-                    <h4>100 Universities by 2030</h4>
-                    <p>Expanding our network across all regions of Uzbekistan</p>
-                </div>
-                <div class="vision-card">
-                    <div class="vision-icon-wrap">
-                        <svg class="icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                            <circle cx="9" cy="7" r="4"/>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                        </svg>
-                    </div>
-                    <h4>50,000 Trained Leaders</h4>
-                    <p>Environmental champions in every field and industry</p>
-                </div>
-                <div class="vision-card">
-                    <div class="vision-icon-wrap">
-                        <svg class="icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M2 22 12 12l10 10"/>
-                            <path d="m7 17 5-5 5 5"/>
-                            <path d="m12 12 5-5"/>
-                            <path d="m17 7-5 5"/>
-                        </svg>
-                    </div>
-                    <h4>40% Carbon Reduction</h4>
-                    <p>Measurable impact on campus environmental footprints</p>
-                </div>
             </div>
         </div>
     </div>
@@ -332,274 +74,150 @@
 
 {% block extra_css %}
 <style>
-    /* About Hero */
-    .about-hero {
-        padding: 160px 0 80px;
-        text-align: center;
+    .about-page {
+        padding: 140px 0 100px;
     }
 
-    .about-hero .hero-title {
-        font-size: clamp(2rem, 5vw, 3.5rem);
+    .about-page-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+    }
+
+    /* Image Side */
+    .about-page-image {
+        position: relative;
+    }
+
+    .about-image-wrapper {
+        position: relative;
+        border-radius: 24px;
+        overflow: hidden;
+    }
+
+    .about-main-image {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .about-image-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 50%);
+    }
+
+    .about-stats-badge {
+        position: absolute;
+        bottom: -30px;
+        right: 30px;
+        background: linear-gradient(135deg, #84cc16 0%, #65a30d 100%);
+        padding: 20px 28px;
+        border-radius: 16px;
+        text-align: center;
+        box-shadow: 0 20px 40px rgba(132, 204, 22, 0.3);
+    }
+
+    .badge-number {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #fff;
+        line-height: 1;
+    }
+
+    .badge-text {
+        display: block;
+        font-size: 0.85rem;
+        color: rgba(255,255,255,0.9);
+        margin-top: 4px;
+    }
+
+    /* Content Side */
+    .about-page-content {
+        padding-right: 20px;
+    }
+
+    .about-page-title {
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        font-weight: 700;
+        color: #fff;
+        line-height: 1.2;
+        margin: 16px 0 32px;
+    }
+
+    .about-text-content {
+        margin-bottom: 32px;
+    }
+
+    .about-text-content p {
+        color: rgba(255,255,255,0.75);
+        font-size: 1rem;
+        line-height: 1.8;
         margin-bottom: 20px;
     }
 
-    .about-hero .hero-subtitle {
-        max-width: 600px;
-        margin: 0 auto;
-        color: rgba(255,255,255,0.7);
+    .about-text-content p:last-child {
+        margin-bottom: 0;
     }
 
-    /* Stats Section */
-    .stats-section {
-        padding: 60px 0;
-        background: rgba(132, 204, 22, 0.05);
-        border-top: 1px solid rgba(132, 204, 22, 0.1);
-        border-bottom: 1px solid rgba(132, 204, 22, 0.1);
-    }
-
-    .stats-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 30px;
-    }
-
-    .stat-card {
-        text-align: center;
-        padding: 30px 20px;
-    }
-
-    .stat-icon-wrap {
-        width: 64px;
-        height: 64px;
-        background: rgba(132, 204, 22, 0.1);
-        border-radius: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 16px;
-    }
-
-    .stat-number {
-        display: block;
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: #84cc16;
-        margin-bottom: 8px;
-    }
-
-    .stat-label {
-        color: rgba(255,255,255,0.7);
-        font-size: 0.95rem;
-    }
-
-    /* Timeline Section */
-    .timeline-section {
-        padding: 100px 0;
-    }
-
-    .timeline-header {
-        text-align: center;
-        margin-bottom: 60px;
-    }
-
-    .timeline {
-        position: relative;
-        max-width: 800px;
-        margin: 0 auto;
-        padding-left: 40px;
-    }
-
-    .timeline::before {
-        content: '';
-        position: absolute;
-        left: 8px;
-        top: 0;
-        bottom: 0;
-        width: 2px;
-        background: linear-gradient(to bottom, #84cc16, rgba(132, 204, 22, 0.2));
-    }
-
-    .timeline-item {
-        position: relative;
-        margin-bottom: 40px;
-    }
-
-    .timeline-marker {
-        position: absolute;
-        left: -40px;
-        top: 0;
-    }
-
-    .timeline-dot {
-        width: 18px;
-        height: 18px;
-        background: #0a0a0a;
-        border: 3px solid #84cc16;
-        border-radius: 50%;
-    }
-
-    .timeline-content {
-        background: rgba(255,255,255,0.02);
-        border: 1px solid rgba(255,255,255,0.05);
-        border-radius: 16px;
-        padding: 24px;
-    }
-
-    .timeline-year {
-        display: inline-block;
-        background: rgba(132, 204, 22, 0.2);
-        color: #84cc16;
-        padding: 4px 12px;
-        border-radius: 20px;
-        font-size: 0.85rem;
-        font-weight: 600;
-        margin-bottom: 12px;
-    }
-
-    .timeline-title {
-        font-size: 1.25rem;
-        margin-bottom: 8px;
-        color: #fff;
-    }
-
-    .timeline-desc {
-        color: rgba(255,255,255,0.7);
-        font-size: 0.95rem;
-        line-height: 1.6;
-    }
-
-    /* Team Section */
-    .team-section {
-        padding: 100px 0;
-        background: rgba(255,255,255,0.01);
-    }
-
-    .team-header {
-        text-align: center;
-        margin-bottom: 60px;
-    }
-
-    .team-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
-    }
-
-    .team-card {
-        background: rgba(255,255,255,0.02);
-        border: 1px solid rgba(255,255,255,0.05);
-        border-radius: 20px;
-        padding: 32px;
-        text-align: center;
-        transition: all 0.3s ease;
-    }
-
-    .team-card:hover {
-        border-color: rgba(132, 204, 22, 0.3);
-        transform: translateY(-4px);
-    }
-
-    .team-avatar {
-        width: 80px;
-        height: 80px;
-        background: rgba(132, 204, 22, 0.1);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 20px;
-    }
-
-    .team-name {
-        font-size: 1.2rem;
-        color: #fff;
-        margin-bottom: 4px;
-    }
-
-    .team-role {
-        display: block;
-        color: #84cc16;
-        font-size: 0.9rem;
-        margin-bottom: 16px;
-    }
-
-    .team-bio {
-        color: rgba(255,255,255,0.6);
-        font-size: 0.9rem;
-        line-height: 1.6;
-    }
-
-    /* Vision Section */
-    .vision-section {
-        padding: 100px 0;
-    }
-
-    .vision-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 60px;
-        align-items: center;
-    }
-
-    .vision-cards {
+    .about-highlights {
         display: flex;
         flex-direction: column;
-        gap: 20px;
-    }
-
-    .vision-card {
-        background: rgba(255,255,255,0.02);
-        border: 1px solid rgba(255,255,255,0.05);
-        border-radius: 16px;
+        gap: 12px;
+        margin-bottom: 32px;
         padding: 24px;
-        display: flex;
-        align-items: flex-start;
-        gap: 16px;
-        transition: all 0.3s ease;
+        background: rgba(132, 204, 22, 0.05);
+        border: 1px solid rgba(132, 204, 22, 0.1);
+        border-radius: 16px;
     }
 
-    .vision-card:hover {
-        border-color: rgba(132, 204, 22, 0.3);
-    }
-
-    .vision-icon-wrap {
-        width: 56px;
-        height: 56px;
-        background: rgba(132, 204, 22, 0.1);
-        border-radius: 12px;
+    .highlight-item {
         display: flex;
         align-items: center;
-        justify-content: center;
+        gap: 12px;
+        color: rgba(255,255,255,0.9);
+        font-size: 0.95rem;
+    }
+
+    .highlight-item .icon {
         flex-shrink: 0;
     }
 
-    .vision-card h4 {
-        font-size: 1.1rem;
-        color: #fff;
-        margin-bottom: 4px;
-    }
-
-    .vision-card p {
-        color: rgba(255,255,255,0.6);
-        font-size: 0.9rem;
-    }
-
-    @media (max-width: 768px) {
-        .vision-grid {
+    @media (max-width: 968px) {
+        .about-page-grid {
             grid-template-columns: 1fr;
-            gap: 40px;
+            gap: 60px;
         }
 
-        .timeline {
-            padding-left: 30px;
+        .about-page-image {
+            order: -1;
         }
 
-        .timeline-marker {
-            left: -30px;
+        .about-main-image {
+            height: 400px;
         }
 
-        .stat-number {
-            font-size: 2rem;
+        .about-page-content {
+            padding-right: 0;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .about-main-image {
+            height: 300px;
+        }
+
+        .about-stats-badge {
+            bottom: -20px;
+            right: 20px;
+            padding: 16px 20px;
+        }
+
+        .badge-number {
+            font-size: 1.5rem;
         }
     }
 </style>
