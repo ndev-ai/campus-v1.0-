@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setupEventListeners();
     setupIntersectionObserver();
     setupPartnersCarousel();
+    setupLogoCarousel();
 });
 
 // Event Listeners
@@ -204,4 +205,22 @@ function setupPartnersCarousel() {
 
     // Set initial cursor
     carousel.style.cursor = 'grab';
+}
+
+// Setup Logo Carousel - switches between logos with fade effect
+function setupLogoCarousel() {
+    const logoCarousel = document.getElementById('logoCarousel');
+    if (!logoCarousel) return;
+
+    const slides = logoCarousel.querySelectorAll('.logo-slide');
+    if (slides.length < 2) return;
+
+    let currentIndex = 0;
+    const intervalTime = 3000; // Switch every 3 seconds
+
+    setInterval(() => {
+        slides[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].classList.add('active');
+    }, intervalTime);
 }
