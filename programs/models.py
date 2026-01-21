@@ -11,7 +11,6 @@ class Program(models.Model):
     objectives = models.TextField(verbose_name="Objectives", help_text="Program goals and objectives")
     impact = models.TextField(verbose_name="Impact", help_text="Expected or achieved impact", blank=True)
     image = models.ImageField(upload_to='programs/', verbose_name="Program Image", blank=True, null=True)
-    icon = models.ImageField(upload_to='programs/icons/', verbose_name="Icon", blank=True, null=True, help_text="Small icon for cards")
     duration = models.CharField(max_length=100, verbose_name="Duration", blank=True, help_text="e.g., 6 months, Ongoing")
     participants = models.IntegerField(default=0, verbose_name="Number of Participants")
     is_active = models.BooleanField(default=True, verbose_name="Active")

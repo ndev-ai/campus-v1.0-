@@ -26,7 +26,7 @@ class ProgramAdmin(admin.ModelAdmin):
             'fields': ('title', 'slug', 'description')
         }),
         ('Media', {
-            'fields': ('image', 'icon')
+            'fields': ('image',)
         }),
         ('Details', {
             'fields': ('overview', 'objectives', 'impact', 'duration', 'participants')
