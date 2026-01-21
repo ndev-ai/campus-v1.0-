@@ -12,11 +12,6 @@
             <div class="about-page-image">
                 <div class="about-image-wrapper">
                     <img src="{% static 'img/volunteer.jpg' %}" alt="Green Campus volunteers planting trees" class="about-main-image">
-                    <div class="about-image-overlay"></div>
-                </div>
-                <div class="about-stats-badge">
-                    <span class="badge-number">47+</span>
-                    <span class="badge-text">Partner Universities</span>
                 </div>
             </div>
 
@@ -34,38 +29,6 @@
 
                     <p>Our approach combines scientific research with practical action. We develop evidence-based solutions tailored to each campus's unique needs, ensuring that our initiatives create lasting impact rather than temporary improvements.</p>
                 </div>
-
-                <div class="about-highlights">
-                    <div class="highlight-item">
-                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                            <polyline points="22 4 12 14.01 9 11.01"/>
-                        </svg>
-                        <span>50,000+ trees planted since 2018</span>
-                    </div>
-                    <div class="highlight-item">
-                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                            <polyline points="22 4 12 14.01 9 11.01"/>
-                        </svg>
-                        <span>89 environmental projects completed</span>
-                    </div>
-                    <div class="highlight-item">
-                        <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#84cc16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                            <polyline points="22 4 12 14.01 9 11.01"/>
-                        </svg>
-                        <span>"Green Campus of the Year" Award 2024</span>
-                    </div>
-                </div>
-
-                <a href="{% url 'contact:contact' %}" class="primary-btn">
-                    <span>Join Our Mission</span>
-                    <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12h14"/>
-                        <path d="m12 5 7 7-7 7"/>
-                    </svg>
-                </a>
             </div>
         </div>
     </div>
@@ -103,38 +66,6 @@
         display: block;
     }
 
-    .about-image-overlay {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 50%);
-    }
-
-    .about-stats-badge {
-        position: absolute;
-        bottom: -30px;
-        right: 30px;
-        background: linear-gradient(135deg, #84cc16 0%, #65a30d 100%);
-        padding: 20px 28px;
-        border-radius: 16px;
-        text-align: center;
-        box-shadow: 0 20px 40px rgba(132, 204, 22, 0.3);
-    }
-
-    .badge-number {
-        display: block;
-        font-size: 2rem;
-        font-weight: 700;
-        color: #fff;
-        line-height: 1;
-    }
-
-    .badge-text {
-        display: block;
-        font-size: 0.85rem;
-        color: rgba(255,255,255,0.9);
-        margin-top: 4px;
-    }
-
     /* Content Side */
     .about-page-content {
         padding-right: 20px;
@@ -148,10 +79,6 @@
         margin: 16px 0 32px;
     }
 
-    .about-text-content {
-        margin-bottom: 32px;
-    }
-
     .about-text-content p {
         color: #444;
         font-size: 1rem;
@@ -161,29 +88,6 @@
 
     .about-text-content p:last-child {
         margin-bottom: 0;
-    }
-
-    .about-highlights {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin-bottom: 32px;
-        padding: 24px;
-        background: rgba(132, 204, 22, 0.08);
-        border: 1px solid rgba(132, 204, 22, 0.2);
-        border-radius: 16px;
-    }
-
-    .highlight-item {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        color: #333;
-        font-size: 0.95rem;
-    }
-
-    .highlight-item .icon {
-        flex-shrink: 0;
     }
 
     @media (max-width: 968px) {
@@ -208,16 +112,6 @@
     @media (max-width: 480px) {
         .about-main-image {
             height: 300px;
-        }
-
-        .about-stats-badge {
-            bottom: -20px;
-            right: 20px;
-            padding: 16px 20px;
-        }
-
-        .badge-number {
-            font-size: 1.5rem;
         }
     }
 </style>
