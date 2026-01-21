@@ -36,8 +36,9 @@
                         <img src="{% static 'img/logo.png' %}" alt="Green Campus Logo" class="logo-img">
                         <img src="{% static 'img/logo2.png' %}" alt="Green Campus Logo" class="logo-img">
                     </div>
+                    <span class="logo-text-mobile">Green Campus</span>
                 </a>
-                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <button class="menu-toggle" id="mobileMenuToggle">
                     <div class="hamburger">
                         <span></span>
                         <span></span>
@@ -52,21 +53,7 @@
                     <a href="{% url 'events:list' %}" class="nav-link {% if 'events' in request.resolver_match.namespace %}active{% endif %}">Events</a>
                     <a href="{% url 'gallery:list' %}" class="nav-link {% if 'gallery' in request.resolver_match.namespace %}active{% endif %}">Gallery</a>
                     <a href="{% url 'contact:contact' %}" class="nav-link {% if 'contact' in request.resolver_match.namespace %}active{% endif %}">Contact</a>
-                    <a href="{% url 'contact:contact' %}" class="join-btn mobile-only">
-                        <span>Join Us</span>
-                        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M5 12h14"/>
-                            <path d="m12 5 7 7-7 7"/>
-                        </svg>
-                    </a>
                 </div>
-                <a href="{% url 'contact:contact' %}" class="join-btn desktop-only">
-                    <span>Join Us</span>
-                    <svg class="icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12h14"/>
-                        <path d="m12 5 7 7-7 7"/>
-                    </svg>
-                </a>
             </div>
         </nav>
 

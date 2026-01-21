@@ -1897,6 +1897,11 @@ body {
         height: 45px;
     }
 
+    .logo-text-mobile {
+        display: block;
+        margin-left: 8px;
+    }
+
     .mobile-menu-toggle {
         display: block;
         order: 3;
