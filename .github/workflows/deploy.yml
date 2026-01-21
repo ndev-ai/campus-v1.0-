@@ -1,0 +1,20 @@
+name: Deploy to PythonAnywhere
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Trigger PythonAnywhere deploy
+        run: |
+          curl -X POST "https://www.pythonanywhere.com/api/v0/user/${{ secrets.ki2212 }}/consoles/" \
+          -H "Authorization: Token ${{ secrets.eaa343cfc450951a92682eb8370bcc0cd8bf79c4 }}" \
+          -d "executable=bash" \
+          -d "arguments=-c 'cd ~/axb_ki_market && ./deploy.sh'"
