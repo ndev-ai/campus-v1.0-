@@ -590,7 +590,7 @@ body {
 
 /* About Section */
 .about-section {
-    padding: 120px 32px;
+    padding: 80px 32px;
     position: relative;
     z-index: 1;
 }
@@ -771,7 +771,7 @@ body {
 
 /* Programs Section */
 .programs-section {
-    padding: 120px 32px;
+    padding: 80px 32px;
     position: relative;
     z-index: 1;
 }
@@ -924,7 +924,7 @@ body {
 
 /* Impact Section */
 .impact-section {
-    padding: 120px 32px;
+    padding: 80px 32px;
     background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%);
     position: relative;
     z-index: 1;
@@ -1037,7 +1037,7 @@ body {
 
 /* News Section */
 .news-section {
-    padding: 120px 32px;
+    padding: 80px 32px;
     position: relative;
     z-index: 1;
     background-color: rgba(132, 204, 22, 0.02);
@@ -1161,7 +1161,7 @@ body {
 
 /* Events Section */
 .events-section {
-    padding: 120px 32px;
+    padding: 80px 32px;
     position: relative;
     z-index: 1;
 }
@@ -1290,7 +1290,7 @@ body {
 
 /* Team Section */
 .team-section {
-    padding: 120px 32px;
+    padding: 80px 32px;
     position: relative;
     z-index: 1;
 }
