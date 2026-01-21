@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ["ki2212.pythonanywhere.com"]
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -45,6 +46,103 @@ INSTALLED_APPS = [
     'gallery',
     'partners',
 ]
+
+# Jazzmin Admin Configuration
+JAZZMIN_SETTINGS = {
+    # Title
+    "site_title": "Green Campus Admin",
+    "site_header": "Green Campus",
+    "site_brand": "Green Campus",
+    "site_logo": "img/logo.png",
+    "login_logo": "img/logo.png",
+    "site_logo_classes": "img-circle",
+    "site_icon": "img/logo.png",
+    "welcome_sign": "Green Campus Admin Panel",
+    "copyright": "Green Campus Initiative",
+
+    # Search
+    "search_model": ["programs.Program", "news.News", "events.Event"],
+
+    # Top Menu
+    "topmenu_links": [
+        {"name": "Home", "url": "admin:index", "permissions": ["auth.view_user"]},
+        {"name": "View Site", "url": "/", "new_window": True},
+    ],
+
+    # User Menu
+    "usermenu_links": [
+        {"name": "View Site", "url": "/", "new_window": True, "icon": "fas fa-globe"},
+    ],
+
+    # Side Menu
+    "show_sidebar": True,
+    "navigation_expanded": True,
+    "hide_apps": [],
+    "hide_models": [],
+
+    # Icons
+    "icons": {
+        "auth": "fas fa-users-cog",
+        "auth.user": "fas fa-user",
+        "auth.Group": "fas fa-users",
+        "programs.Program": "fas fa-leaf",
+        "news.News": "fas fa-newspaper",
+        "events.Event": "fas fa-calendar-alt",
+        "events.EventRegistration": "fas fa-clipboard-list",
+        "contact.ContactMessage": "fas fa-envelope",
+        "gallery.GalleryImage": "fas fa-images",
+        "partners.Partner": "fas fa-handshake",
+    },
+    "default_icon_parents": "fas fa-chevron-circle-right",
+    "default_icon_children": "fas fa-circle",
+
+    # Related Modal
+    "related_modal_active": True,
+
+    # UI Tweaks
+    "custom_css": None,
+    "custom_js": None,
+    "use_google_fonts_cdn": True,
+    "show_ui_builder": False,
+
+    # Change view
+    "changeform_format": "horizontal_tabs",
+    "changeform_format_overrides": {
+        "auth.user": "collapsible",
+    },
+}
+
+JAZZMIN_UI_TWEAKS = {
+    "navbar_small_text": False,
+    "footer_small_text": False,
+    "body_small_text": False,
+    "brand_small_text": False,
+    "brand_colour": "navbar-success",
+    "accent": "accent-lime",
+    "navbar": "navbar-white navbar-light",
+    "no_navbar_border": False,
+    "navbar_fixed": True,
+    "layout_boxed": False,
+    "footer_fixed": False,
+    "sidebar_fixed": True,
+    "sidebar": "sidebar-dark-success",
+    "sidebar_nav_small_text": False,
+    "sidebar_disable_expand": False,
+    "sidebar_nav_child_indent": False,
+    "sidebar_nav_compact_style": False,
+    "sidebar_nav_legacy_style": False,
+    "sidebar_nav_flat_style": False,
+    "theme": "default",
+    "dark_mode_theme": None,
+    "button_classes": {
+        "primary": "btn-primary",
+        "secondary": "btn-secondary",
+        "info": "btn-info",
+        "warning": "btn-warning",
+        "danger": "btn-danger",
+        "success": "btn-success"
+    }
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

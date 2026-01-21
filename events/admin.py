@@ -1,9 +1,9 @@
 from django.contrib import admin
+from django.utils.html import format_html
 from .models import Event, Registration
 
 
 class RegistrationInline(admin.TabularInline):
-    """Inline admin for viewing registrations within Event admin"""
     model = Registration
     extra = 0
     readonly_fields = ('full_name', 'email', 'phone', 'note', 'created_at')
@@ -16,30 +16,46 @@ class RegistrationInline(admin.TabularInline):
 @admin.register(Event)
 class EventAdmin(admin.ModelAdmin):
     list_display = ('name', 'date', 'location', 'is_featured', 'registration_count', 'created_at')
-    list_filter = ('date', 'is_featured')
-    search_fields = ('name', 'location')
+    list_filter = ('date', 'is_featured', 'created_at')
+    search_fields = ('name', 'location', 'description')
     date_hierarchy = 'date'
-    ordering = ('date',)
+    ordering = ('-date',)
+    list_editable = ('is_featured',)
+    list_per_page = 20
+    save_on_top = True
     inlines = [RegistrationInline]
 
     def registration_count(self, obj):
-        """Display number of registrations for this event"""
-        return obj.registrations.count()
+        count = obj.registrations.count()
+        return format_html('<span style="color: #22c55e; font-weight: bold;">{}</span>', count)
     registration_count.short_description = 'Registrations'
+
+    fieldsets = (
+        ('Event Information', {
+            'fields': ('name', 'date', 'location')
+        }),
+        ('Description', {
+            'fields': ('description',)
+        }),
+        ('Settings', {
+            'fields': ('is_featured',)
+        }),
+    )
 
 
 @admin.register(Registration)
 class RegistrationAdmin(admin.ModelAdmin):
-    """Admin interface for managing event registrations"""
     list_display = ('full_name', 'email', 'phone', 'event', 'created_at')
     list_filter = ('event', 'created_at')
     search_fields = ('full_name', 'email', 'phone', 'event__name')
     date_hierarchy = 'created_at'
     readonly_fields = ('created_at',)
     ordering = ('-created_at',)
+    list_per_page = 30
+    list_select_related = ('event',)
 
     fieldsets = (
-        ('Event Information', {
+        ('Event', {
             'fields': ('event',)
         }),
         ('Registrant Details', {
@@ -50,3 +66,6 @@ class RegistrationAdmin(admin.ModelAdmin):
             'classes': ('collapse',)
         }),
     )
+
+    def has_add_permission(self, request):
+        return False
