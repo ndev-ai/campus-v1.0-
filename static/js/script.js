@@ -4,19 +4,15 @@ const nav = document.getElementById('nav');
 const heroStats = document.getElementById('heroStats');
 const mobileMenuToggle = document.getElementById('mobileMenuToggle');
 const navLinks = document.getElementById('navLinks');
-const langBtn = document.getElementById('langBtn');
-const langDropdown = document.getElementById('langDropdown');
 
 // State
 let countersVisible = false;
 let mobileMenuOpen = false;
-let langDropdownOpen = false;
 
 // Initialize
 document.addEventListener('DOMContentLoaded', function() {
     setupEventListeners();
     setupIntersectionObserver();
-    setupLanguageSelector();
     setupPartnersCarousel();
 });
 
@@ -116,48 +112,6 @@ function animateCounters() {
             clearInterval(timer);
         }
     }, interval);
-}
-
-// Setup Language Selector
-function setupLanguageSelector() {
-    if (langBtn && langDropdown) {
-        // Toggle dropdown on button click
-        langBtn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            langDropdownOpen = !langDropdownOpen;
-            langDropdown.classList.toggle('open');
-        });
-
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function(e) {
-            if (langDropdownOpen && !langBtn.contains(e.target) && !langDropdown.contains(e.target)) {
-                langDropdownOpen = false;
-                langDropdown.classList.remove('open');
-            }
-        });
-
-        // Close dropdown on escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && langDropdownOpen) {
-                langDropdownOpen = false;
-                langDropdown.classList.remove('open');
-            }
-        });
-
-        // Fix language switching - remove old language prefix from next URL
-        const langForms = langDropdown.querySelectorAll('.lang-form');
-        langForms.forEach(form => {
-            form.addEventListener('submit', function(e) {
-                const nextInput = form.querySelector('input[name="next"]');
-                if (nextInput) {
-                    let path = nextInput.value;
-                    // Remove language prefix (e.g., /uz/, /ru/, /en/)
-                    path = path.replace(/^\/(uz|ru|en)(\/|$)/, '/');
-                    nextInput.value = path || '/';
-                }
-            });
-        });
-    }
 }
 
 // Setup Partners Carousel with touch support

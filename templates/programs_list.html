@@ -1,16 +1,16 @@
 {% extends 'base.html' %}
-{% load static i18n %}
+{% load static %}
 
-{% block title %}{% trans "Our Programs" %} - {% trans "Green Campus Initiative" %}{% endblock %}
+{% block title %}Our Programs - Green Campus Initiative{% endblock %}
 
 {% block content %}
 <!-- Programs Section -->
 <section class="programs-section" id="programs">
     <div class="section-content">
         <div class="programs-header">
-            <span class="section-tag">{% trans "Our Programs" %}</span>
-            <h2 class="section-title">{% trans "A Comprehensive Approach to Campus Ecology" %}</h2>
-            <p class="section-subtitle">{% trans "Key directions that transform universities into sustainable development centers" %}</p>
+            <span class="section-tag">Our Programs</span>
+            <h2 class="section-title">A Comprehensive Approach to Campus Ecology</h2>
+            <p class="section-subtitle">Key directions that transform universities into sustainable development centers</p>
         </div>
         <div class="programs-grid">
             {% for program in programs %}
@@ -27,7 +27,7 @@
                 <h3 class="program-title">{{ program.title }}</h3>
                 <p class="program-desc">{{ program.description }}</p>
                 <a href="{% url 'programs:detail' program.slug %}" class="program-link">
-                    {% trans "Learn More" %}
+                    Learn More
                     <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M5 12h14"/>
                         <path d="m12 5 7 7-7 7"/>
@@ -37,7 +37,7 @@
             </div>
             {% empty %}
             <div class="empty-state">
-                <p class="empty-state-text">{% trans "No programs available at the moment." %}</p>
+                <p class="empty-state-text">No programs available at the moment.</p>
             </div>
             {% endfor %}
         </div>

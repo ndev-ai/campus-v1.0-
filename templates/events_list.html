@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
-{% load static i18n %}
+{% load static %}
 
-{% block title %}{% trans "Events" %} - {% trans "Green Campus Initiative" %}{% endblock %}
+{% block title %}Events - Green Campus Initiative{% endblock %}
 
 {% block content %}
 <!-- Events Section -->
@@ -9,8 +9,8 @@
     <div class="section-content">
         <div class="events-header">
             <div>
-                <span class="section-tag">{% trans "Event Calendar" %}</span>
-                <h2 class="section-title">{% trans "Upcoming Events" %}</h2>
+                <span class="section-tag">Event Calendar</span>
+                <h2 class="section-title">Upcoming Events</h2>
             </div>
         </div>
         <div class="events-grid">
@@ -37,7 +37,7 @@
                     </p>
                 </div>
                 <a href="{% url 'events:detail' event.id %}" class="event-btn">
-                    {% trans "Register" %}
+                    Register
                     <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M5 12h14"/>
                         <path d="m12 5 7 7-7 7"/>
@@ -46,7 +46,7 @@
             </div>
             {% empty %}
             <div class="empty-state">
-                <p class="empty-state-text">{% trans "No events scheduled at the moment." %}</p>
+                <p class="empty-state-text">No events scheduled at the moment.</p>
             </div>
             {% endfor %}
         </div>
