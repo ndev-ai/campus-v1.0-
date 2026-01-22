@@ -38,7 +38,12 @@
 {% block extra_css %}
 <style>
     .about-page {
-        padding: 140px 0 100px;
+        padding: 140px 32px 100px;
+    }
+
+    .about-page .section-content {
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
     .about-page-grid {
@@ -70,11 +75,12 @@
     }
 
     .about-page-title {
-        font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+        font-size: clamp(1.4rem, 3.5vw, 2.2rem);
         font-weight: 700;
         color: #1a1a1a;
         line-height: 1.3;
         margin: 16px 0 32px;
+        word-wrap: break-word;
     }
 
     .about-text-content p {
@@ -88,10 +94,15 @@
         margin-bottom: 0;
     }
 
+    /* Tablet */
     @media (max-width: 968px) {
+        .about-page {
+            padding: 120px 24px 80px;
+        }
+
         .about-page-grid {
             grid-template-columns: 1fr;
-            gap: 60px;
+            gap: 40px;
         }
 
         .about-page-image {
@@ -99,17 +110,64 @@
         }
 
         .about-main-image {
-            height: 400px;
+            height: 350px;
         }
 
         .about-page-content {
             padding-right: 0;
         }
+
+        .about-page-title {
+            margin: 12px 0 24px;
+        }
     }
 
-    @media (max-width: 480px) {
+    /* Mobile */
+    @media (max-width: 600px) {
+        .about-page {
+            padding: 100px 16px 60px;
+        }
+
+        .about-page-grid {
+            gap: 32px;
+        }
+
+        .about-image-wrapper {
+            border-radius: 16px;
+        }
+
         .about-main-image {
-            height: 300px;
+            height: 250px;
+        }
+
+        .about-page-title {
+            font-size: 1.3rem;
+            margin: 10px 0 20px;
+        }
+
+        .about-text-content p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+    }
+
+    /* Small Mobile */
+    @media (max-width: 400px) {
+        .about-page {
+            padding: 90px 12px 50px;
+        }
+
+        .about-main-image {
+            height: 200px;
+        }
+
+        .about-page-title {
+            font-size: 1.2rem;
+        }
+
+        .about-text-content p {
+            font-size: 0.9rem;
         }
     }
 </style>
