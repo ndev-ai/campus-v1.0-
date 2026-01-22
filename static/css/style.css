@@ -3182,10 +3182,12 @@ textarea.contact-input {
         height: 45px;
     }
 
-    .logo-text,
-    .logo-text-mobile,
-    .desktop-only.logo-text {
+    .logo .logo-text,
+    .logo .logo-text-mobile,
+    .logo-text.desktop-only,
+    span.logo-text {
         display: none !important;
+        visibility: hidden !important;
     }
 
     .nav-links {
