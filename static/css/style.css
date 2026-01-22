@@ -3164,26 +3164,52 @@ textarea.contact-input {
 
 /* Tablet Styles (768px - 1024px) */
 @media (max-width: 1024px) and (min-width: 769px) {
-    /* Base */
-    .section-content {
-        padding: 0 32px;
+    /* Navigation - Clean Compact Design */
+    .nav {
+        padding: 12px 0;
     }
 
-    /* Navigation */
     .nav-content {
-        padding: 0 24px;
+        padding: 0 20px;
+    }
+
+    .logo {
+        gap: 8px;
+    }
+
+    .logo .logo-img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .logo-text,
+    .logo-text-mobile,
+    .desktop-only.logo-text {
+        display: none !important;
     }
 
     .nav-links {
-        gap: 16px;
+        gap: 6px;
     }
 
     .nav-link {
-        font-size: 14px;
+        font-size: 13px;
+        padding: 8px 10px;
     }
 
-    .logo-text {
-        font-size: 18px;
+    .join-btn.desktop-only {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    .join-btn.desktop-only .icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    /* Base */
+    .section-content {
+        padding: 0 32px;
     }
 
     /* Hero Section */
