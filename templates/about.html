@@ -1,118 +1,37 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}About Us - Green Campus Initiative{% endblock %}
+{% block title %}About - GreenCamUz{% endblock %}
 
 {% block content %}
-<!-- About Page -->
-<section class="about-page" style="padding-top: 140px;">
+<!-- About Section -->
+<section class="about-section" id="about" style="padding-top: 140px;">
     <div class="section-content">
-        <div class="about-page-grid">
-            <!-- Left: Image -->
-            <div class="about-page-image">
-                <div class="about-image-wrapper">
-                    <img src="{% static 'img/volunteer.jpg' %}" alt="Green Campus volunteers planting trees" class="about-main-image">
-                </div>
+        <div class="about-grid">
+            <div class="about-text">
+                <span class="section-tag">About GreenCamUz</span>
+                <h2 class="section-title">Green Campus Initiative: Integrating Sustainability into Higher Education in Uzbekistan</h2>
+
+                <p class="about-paragraph"><strong>GreenCamUz</strong> is an international project developed by partner higher education institutions from Uzbekistan, Europe, and Türkiye. The project is funded by a <strong>€359,000 European Union grant</strong> under the Erasmus+ Capacity Building in Higher Education (CBHE) Strand 1 framework.</p>
+
+                <p class="about-paragraph">GreenCamUz is the <strong>only project in Uzbekistan</strong> funded under the CBHE Strand 1 category. It is implemented in line with the United Nations Sustainable Development Goals (SDGs) and the European Green Deal priorities.</p>
+
+                <p class="about-paragraph">The project aims to integrate sustainability approaches into higher education institutions through curriculum modernization, capacity building, and green pilot initiatives across partner campuses.</p>
+
+                <p class="about-paragraph">The project will be implemented during <strong>2025–2028</strong> with 9 partner universities from Uzbekistan, Poland, Lithuania, and Türkiye.</p>
             </div>
 
-            <!-- Right: Content -->
-            <div class="about-page-content">
-                <span class="section-tag">About Us</span>
-                <h1 class="about-page-title">Building a Sustainable Future Through Education</h1>
-
-                <div class="about-text-content">
-                    <p>Green Campus Initiative was founded in 2018 by a group of passionate environmental science students at the National University of Uzbekistan. What started as a small tree-planting campaign has grown into a nationwide movement transforming how universities approach environmental sustainability.</p>
-
-                    <p>Our mission is to create a culture of environmental responsibility within higher education institutions. We believe that universities are not just places of learning - they are communities that can model sustainable practices and inspire the next generation of environmental leaders.</p>
-
-                    <p>Today, we work with over 47 universities across Uzbekistan, engaging more than 12,000 active volunteers in projects ranging from campus greening and waste management to renewable energy initiatives and environmental education programs.</p>
-
-                    <p>Our approach combines scientific research with practical action. We develop evidence-based solutions tailored to each campus's unique needs, ensuring that our initiatives create lasting impact rather than temporary improvements.</p>
+            <div class="about-visual">
+                <div class="image-card">
+                    <div class="image-placeholder">
+                        <div class="image-pattern"></div>
+                        <div class="image-icon-wrap">
+                            <img src="{% static 'img/volunteer.jpg' %}" alt="GreenCamUz" class="action-image">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-{% endblock %}
-
-{% block extra_css %}
-<style>
-    .about-page {
-        padding: 140px 0 100px;
-    }
-
-    .about-page-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 80px;
-        align-items: center;
-    }
-
-    /* Image Side */
-    .about-page-image {
-        position: relative;
-    }
-
-    .about-image-wrapper {
-        position: relative;
-        border-radius: 24px;
-        overflow: hidden;
-    }
-
-    .about-main-image {
-        width: 100%;
-        height: 500px;
-        object-fit: cover;
-        display: block;
-    }
-
-    /* Content Side */
-    .about-page-content {
-        padding-right: 20px;
-    }
-
-    .about-page-title {
-        font-size: clamp(1.8rem, 4vw, 2.5rem);
-        font-weight: 700;
-        color: #1a1a1a;
-        line-height: 1.2;
-        margin: 16px 0 32px;
-    }
-
-    .about-text-content p {
-        color: #444;
-        font-size: 1rem;
-        line-height: 1.8;
-        margin-bottom: 20px;
-    }
-
-    .about-text-content p:last-child {
-        margin-bottom: 0;
-    }
-
-    @media (max-width: 968px) {
-        .about-page-grid {
-            grid-template-columns: 1fr;
-            gap: 60px;
-        }
-
-        .about-page-image {
-            order: -1;
-        }
-
-        .about-main-image {
-            height: 400px;
-        }
-
-        .about-page-content {
-            padding-right: 0;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .about-main-image {
-            height: 300px;
-        }
-    }
-</style>
 {% endblock %}
