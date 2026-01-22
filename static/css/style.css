@@ -3157,3 +3157,303 @@ textarea.contact-input {
         width: 50px;
     }
 }
+
+/* ==========================================
+   COMPREHENSIVE RESPONSIVE STYLES
+   ========================================== */
+
+/* Tablet Styles (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .section-content {
+        padding: 0 24px;
+    }
+
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+
+    .programs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile Styles (up to 768px) */
+@media (max-width: 768px) {
+    /* Base */
+    .section-content {
+        padding: 0 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 100px 20px 60px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    /* About Section */
+    .about-section {
+        padding: 60px 20px;
+    }
+
+    .about-paragraph {
+        font-size: 15px;
+    }
+
+    .value-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+
+    /* Programs Section */
+    .programs-section {
+        padding: 60px 20px;
+    }
+
+    .programs-header {
+        margin-bottom: 40px;
+    }
+
+    .program-card {
+        padding: 24px;
+    }
+
+    /* News Section */
+    .news-section {
+        padding: 60px 20px;
+    }
+
+    .news-header {
+        margin-bottom: 40px;
+    }
+
+    .news-image {
+        height: 180px;
+    }
+
+    /* Events Section */
+    .events-section {
+        padding: 60px 20px;
+    }
+
+    .events-header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* CTA Section */
+    .cta-section {
+        padding: 60px 20px;
+    }
+
+    .cta-title {
+        font-size: 28px;
+    }
+
+    .cta-text {
+        font-size: 16px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 60px 20px 30px;
+    }
+
+    .footer-content {
+        padding: 0;
+    }
+
+    .footer-main {
+        gap: 40px;
+    }
+
+    .footer-brand {
+        text-align: center;
+    }
+
+    .footer-logo {
+        justify-content: center;
+    }
+
+    .footer-socials {
+        justify-content: center;
+    }
+
+    .footer-links {
+        text-align: center;
+    }
+
+    .footer-column {
+        margin-bottom: 24px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .footer-legal {
+        justify-content: center;
+    }
+}
+
+/* Small Mobile Styles (up to 480px) */
+@media (max-width: 480px) {
+    /* Base */
+    .section-content {
+        padding: 0 16px;
+    }
+
+    .section-tag {
+        font-size: 12px;
+        padding: 8px 14px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 90px 16px 50px;
+    }
+
+    .hero-title {
+        font-size: 26px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+    .hero-tag {
+        font-size: 11px;
+    }
+
+    /* About Section */
+    .about-section {
+        padding: 50px 16px;
+    }
+
+    .about-values {
+        gap: 20px;
+    }
+
+    .value-icon-wrap {
+        width: 48px;
+        height: 48px;
+    }
+
+    /* Programs */
+    .programs-section {
+        padding: 50px 16px;
+    }
+
+    .program-card {
+        padding: 20px;
+    }
+
+    .program-title {
+        font-size: 18px;
+    }
+
+    /* News */
+    .news-section {
+        padding: 50px 16px;
+    }
+
+    .news-content {
+        padding: 16px;
+    }
+
+    .news-title {
+        font-size: 16px;
+    }
+
+    /* Events */
+    .events-section {
+        padding: 50px 16px;
+    }
+
+    .event-card {
+        padding: 16px;
+    }
+
+    .event-date {
+        padding: 12px;
+    }
+
+    .event-day {
+        font-size: 20px;
+    }
+
+    /* CTA Section */
+    .cta-section {
+        padding: 50px 16px;
+    }
+
+    .cta-title {
+        font-size: 22px;
+    }
+
+    .cta-text {
+        font-size: 14px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 50px 16px 24px;
+    }
+
+    .footer-logo-text {
+        font-size: 18px;
+    }
+
+    .footer-desc {
+        font-size: 14px;
+    }
+
+    .footer-col-title {
+        font-size: 14px;
+    }
+
+    .footer-link {
+        font-size: 13px;
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+
+    /* Gallery */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}

@@ -1,0 +1,356 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Materials - GreenCamUz{% endblock %}
+
+{% block content %}
+<!-- Materials Page -->
+<section class="materials-page" style="padding-top: 140px;">
+    <div class="section-content">
+        <div class="materials-header">
+            <span class="section-tag">Resources</span>
+            <h1 class="section-title">Downloadable Materials</h1>
+            <p class="materials-subtitle">Access templates, guides, and resources for your green campus initiatives</p>
+        </div>
+
+        {% for category in categories %}
+        {% if category.materials.all %}
+        <div class="materials-category">
+            <h2 class="category-title">{{ category.name }}</h2>
+            {% if category.description %}
+            <p class="category-desc">{{ category.description }}</p>
+            {% endif %}
+            <div class="materials-grid">
+                {% for material in category.materials.all %}
+                {% if material.is_active %}
+                <div class="material-card">
+                    <div class="material-icon file-{{ material.file_type }}">
+                        {% if material.file_type == 'pdf' %}
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                        {% elif material.file_type == 'doc' %}
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                        </svg>
+                        {% elif material.file_type == 'xls' %}
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <rect x="8" y="12" width="8" height="6"/>
+                            <line x1="12" y1="12" x2="12" y2="18"/>
+                            <line x1="8" y1="15" x2="16" y2="15"/>
+                        </svg>
+                        {% elif material.file_type == 'ppt' %}
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <rect x="8" y="12" width="8" height="6" rx="1"/>
+                        </svg>
+                        {% elif material.file_type == 'zip' %}
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                            <line x1="12" y1="11" x2="12" y2="17"/>
+                            <line x1="9" y1="14" x2="15" y2="14"/>
+                        </svg>
+                        {% else %}
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                        </svg>
+                        {% endif %}
+                    </div>
+                    <div class="material-info">
+                        <h3 class="material-title">{{ material.title }}</h3>
+                        {% if material.description %}
+                        <p class="material-desc">{{ material.description }}</p>
+                        {% endif %}
+                        <div class="material-meta">
+                            <span class="file-type-badge badge-{{ material.file_type }}">{{ material.get_file_type_display }}</span>
+                            <span class="file-size">{{ material.file_size }}</span>
+                        </div>
+                    </div>
+                    <a href="{% url 'core:download_material' material.pk %}" class="download-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        Download
+                    </a>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {% if uncategorized_materials %}
+        <div class="materials-category">
+            <h2 class="category-title">Other Materials</h2>
+            <div class="materials-grid">
+                {% for material in uncategorized_materials %}
+                <div class="material-card">
+                    <div class="material-icon file-{{ material.file_type }}">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                        </svg>
+                    </div>
+                    <div class="material-info">
+                        <h3 class="material-title">{{ material.title }}</h3>
+                        {% if material.description %}
+                        <p class="material-desc">{{ material.description }}</p>
+                        {% endif %}
+                        <div class="material-meta">
+                            <span class="file-type-badge badge-{{ material.file_type }}">{{ material.get_file_type_display }}</span>
+                            <span class="file-size">{{ material.file_size }}</span>
+                        </div>
+                    </div>
+                    <a href="{% url 'core:download_material' material.pk %}" class="download-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7 10 12 15 17 10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        Download
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if not categories and not uncategorized_materials %}
+        <div class="no-materials">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.5">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+            </svg>
+            <p>No materials available yet. Check back soon!</p>
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .materials-page {
+        padding: 140px 32px 80px;
+        min-height: 70vh;
+    }
+
+    .materials-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .materials-subtitle {
+        color: #666;
+        font-size: 1.1rem;
+        margin-top: 16px;
+    }
+
+    .materials-category {
+        margin-bottom: 48px;
+    }
+
+    .category-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+        border-bottom: 2px solid #84cc16;
+        display: inline-block;
+    }
+
+    .category-desc {
+        color: #666;
+        margin-bottom: 24px;
+    }
+
+    .materials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 24px;
+    }
+
+    .material-card {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 16px;
+        border: 1px solid #e5e5e5;
+        transition: all 0.3s ease;
+    }
+
+    .material-card:hover {
+        border-color: #84cc16;
+        box-shadow: 0 10px 30px rgba(132, 204, 22, 0.1);
+        transform: translateY(-2px);
+    }
+
+    .material-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .file-pdf { background: #fef2f2; color: #dc2626; }
+    .file-doc { background: #eff6ff; color: #2563eb; }
+    .file-xls { background: #f0fdf4; color: #16a34a; }
+    .file-ppt { background: #fff7ed; color: #ea580c; }
+    .file-zip { background: #f5f3ff; color: #7c3aed; }
+    .file-other { background: #f9fafb; color: #6b7280; }
+
+    .material-info {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .material-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #1a1a1a;
+        margin-bottom: 4px;
+    }
+
+    .material-desc {
+        font-size: 0.85rem;
+        color: #666;
+        margin-bottom: 8px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .material-meta {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .file-type-badge {
+        font-size: 0.7rem;
+        font-weight: 600;
+        padding: 4px 8px;
+        border-radius: 4px;
+        text-transform: uppercase;
+    }
+
+    .badge-pdf { background: #fef2f2; color: #dc2626; }
+    .badge-doc { background: #eff6ff; color: #2563eb; }
+    .badge-xls { background: #f0fdf4; color: #16a34a; }
+    .badge-ppt { background: #fff7ed; color: #ea580c; }
+    .badge-zip { background: #f5f3ff; color: #7c3aed; }
+    .badge-other { background: #f9fafb; color: #6b7280; }
+
+    .file-size {
+        font-size: 0.8rem;
+        color: #999;
+    }
+
+    .download-btn {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 16px;
+        background: #84cc16;
+        color: #fff;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        flex-shrink: 0;
+    }
+
+    .download-btn:hover {
+        background: #65a30d;
+        transform: translateY(-2px);
+    }
+
+    .no-materials {
+        text-align: center;
+        padding: 80px 20px;
+        color: #999;
+    }
+
+    .no-materials svg {
+        margin-bottom: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .materials-page {
+            padding: 120px 20px 60px;
+        }
+
+        .materials-header {
+            margin-bottom: 40px;
+        }
+
+        .materials-subtitle {
+            font-size: 1rem;
+        }
+
+        .materials-grid {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        .material-card {
+            flex-direction: column;
+            text-align: center;
+            padding: 24px 16px;
+        }
+
+        .material-meta {
+            justify-content: center;
+        }
+
+        .download-btn {
+            width: 100%;
+            justify-content: center;
+            margin-top: 12px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .materials-page {
+            padding: 100px 16px 50px;
+        }
+
+        .category-title {
+            font-size: 1.25rem;
+        }
+
+        .material-icon {
+            width: 48px;
+            height: 48px;
+        }
+
+        .material-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+</style>
+{% endblock %}

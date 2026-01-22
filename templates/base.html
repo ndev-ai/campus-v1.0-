@@ -36,8 +36,8 @@
                         <img src="{% static 'img/logo2.png' %}" alt="Green Campus Logo" class="logo-img">
                         <img src="{% static 'img/logo.png' %}" alt="Green Campus Logo" class="logo-img">
                     </div>
-                    <span class="logo-text desktop-only">Green Campus</span>
-                    <span class="logo-text-mobile">Green Campus</span>
+                    <span class="logo-text desktop-only">GreenCamUz</span>
+                    <span class="logo-text-mobile">GreenCamUz</span>
                 </a>
                 <div class="nav-links" id="navLinks">
                     <a href="{% url 'core:home' %}" class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a>
@@ -108,7 +108,7 @@
                                 <img src="{% static 'img/logo2.png' %}" alt="Green Campus Logo" class="logo-img">
                                 <img src="{% static 'img/logo.png' %}" alt="Green Campus Logo" class="logo-img">
                             </div>
-                            <span class="footer-logo-text">Green Campus</span>
+                            <span class="footer-logo-text">GreenCamUz</span>
                         </div>
                         <p class="footer-desc">Creating environmentally sustainable campuses for the education of the future</p>
                         <div class="footer-socials">
@@ -149,15 +149,16 @@
                         <div class="footer-column">
                             <h4 class="footer-col-title">Navigation</h4>
                             <a href="{% url 'core:about' %}" class="footer-link">About</a>
+                            <a href="{% url 'programs:list' %}" class="footer-link">Programs</a>
                             <a href="{% url 'gallery:list' %}" class="footer-link">Gallery</a>
                             <a href="{% url 'events:list' %}" class="footer-link">Events</a>
                         </div>
                         <div class="footer-column">
                             <h4 class="footer-col-title">Resources</h4>
-                            <a href="{% url 'programs:list' %}" class="footer-link">Methodological Materials</a>
-                            <a href="{% url 'news:list' %}" class="footer-link">Research</a>
+                            <a href="{% url 'core:materials' %}" class="footer-link">Materials</a>
+                            <a href="{% url 'news:list' %}" class="footer-link">News</a>
                             <a href="{% url 'core:faq' %}" class="footer-link">FAQ</a>
-                            <a href="{% url 'contact:contact' %}" class="footer-link">For Media</a>
+                            <a href="{% url 'contact:contact' %}" class="footer-link">Contact</a>
                         </div>
                         <div class="footer-column">
                             <h4 class="footer-col-title">Contact</h4>
@@ -185,7 +186,7 @@
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <p class="copyright">© 2025 Green Campus Initiative. All rights reserved.</p>
+                    <p class="copyright">© 2025 GreenCamUz. All rights reserved.</p>
                     <div class="footer-legal">
                         <a href="{% url 'core:privacy' %}" class="legal-link">Privacy Policy</a>
                         <a href="{% url 'core:terms' %}" class="legal-link">Terms of Use</a>
