@@ -4,171 +4,34 @@
 {% block title %}About - GreenCamUz{% endblock %}
 
 {% block content %}
-<!-- About Page -->
-<section class="about-page" style="padding-top: 140px;">
+<!-- About Section -->
+<section class="about-section" id="about" style="padding-top: 140px;">
     <div class="section-content">
-        <div class="about-page-grid">
-            <!-- Left: Image -->
-            <div class="about-page-image">
-                <div class="about-image-wrapper">
-                    <img src="{% static 'img/volunteer.jpg' %}" alt="GreenCamUz" class="about-main-image">
-                </div>
+        <div class="about-grid">
+            <div class="about-text">
+                <span class="section-tag">About GreenCamUz</span>
+                <h2 class="section-title">Green Campus Initiative: Integrating Sustainability into Higher Education in Uzbekistan</h2>
+
+                <p class="about-paragraph"><strong>GreenCamUz</strong> is an international project developed by partner higher education institutions from Uzbekistan, Europe, and Türkiye. The project is funded by a <strong>€359,000 European Union grant</strong> under the Erasmus+ Capacity Building in Higher Education (CBHE) Strand 1 framework.</p>
+
+                <p class="about-paragraph">GreenCamUz is the <strong>only project in Uzbekistan</strong> funded under the CBHE Strand 1 category. It is implemented in line with the United Nations Sustainable Development Goals (SDGs) and the European Green Deal priorities.</p>
+
+                <p class="about-paragraph">The project aims to integrate sustainability approaches into higher education institutions through curriculum modernization, capacity building, and green pilot initiatives across partner campuses.</p>
+
+                <p class="about-paragraph">The project will be implemented during <strong>2025–2028</strong> with 9 partner universities from Uzbekistan, Poland, Lithuania, and Türkiye.</p>
             </div>
 
-            <!-- Right: Content -->
-            <div class="about-page-content">
-                <span class="section-tag">About GreenCamUz</span>
-                <h1 class="about-page-title">Green Campus Initiative: Integrating Sustainability into Higher Education in Uzbekistan</h1>
-
-                <div class="about-text-content">
-                    <p><strong>GreenCamUz</strong> is an international project developed by partner higher education institutions from Uzbekistan, Europe, and Türkiye. The project is funded by a <strong>€359,000 European Union grant</strong> under the Erasmus+ Capacity Building in Higher Education (CBHE) Strand 1 framework.</p>
-
-                    <p>GreenCamUz is the <strong>only project in Uzbekistan</strong> funded under the CBHE Strand 1 category. It is implemented in line with the United Nations Sustainable Development Goals (SDGs) and the European Green Deal priorities.</p>
-
-                    <p>The project aims to integrate sustainability approaches into higher education institutions through curriculum modernization, capacity building, and green pilot initiatives across partner campuses.</p>
-
-                    <p>The project will be implemented during <strong>2025–2028</strong> with 9 partner universities from Uzbekistan, Poland, Lithuania, and Türkiye.</p>
+            <div class="about-visual">
+                <div class="image-card">
+                    <div class="image-placeholder">
+                        <div class="image-pattern"></div>
+                        <div class="image-icon-wrap">
+                            <img src="{% static 'img/volunteer.jpg' %}" alt="GreenCamUz" class="action-image">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-{% endblock %}
-
-{% block extra_css %}
-<style>
-    .about-page {
-        padding: 140px 32px 100px;
-    }
-
-    .about-page .section-content {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    .about-page-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 80px;
-        align-items: center;
-    }
-
-    .about-page-image {
-        position: relative;
-    }
-
-    .about-image-wrapper {
-        position: relative;
-        border-radius: 24px;
-        overflow: hidden;
-    }
-
-    .about-main-image {
-        width: 100%;
-        height: 500px;
-        object-fit: cover;
-        display: block;
-    }
-
-    .about-page-content {
-        padding-right: 20px;
-    }
-
-    .about-page-title {
-        font-size: clamp(1.4rem, 3.5vw, 2.2rem);
-        font-weight: 700;
-        color: #1a1a1a;
-        line-height: 1.3;
-        margin: 16px 0 32px;
-        word-wrap: break-word;
-    }
-
-    .about-text-content p {
-        color: #444;
-        font-size: 1rem;
-        line-height: 1.8;
-        margin-bottom: 20px;
-    }
-
-    .about-text-content p:last-child {
-        margin-bottom: 0;
-    }
-
-    /* Tablet */
-    @media (max-width: 968px) {
-        .about-page {
-            padding: 120px 24px 80px;
-        }
-
-        .about-page-grid {
-            grid-template-columns: 1fr;
-            gap: 40px;
-        }
-
-        .about-page-image {
-            order: -1;
-        }
-
-        .about-main-image {
-            height: 350px;
-        }
-
-        .about-page-content {
-            padding-right: 0;
-        }
-
-        .about-page-title {
-            margin: 12px 0 24px;
-        }
-    }
-
-    /* Mobile */
-    @media (max-width: 600px) {
-        .about-page {
-            padding: 100px 16px 60px;
-        }
-
-        .about-page-grid {
-            gap: 32px;
-        }
-
-        .about-image-wrapper {
-            border-radius: 16px;
-        }
-
-        .about-main-image {
-            height: 250px;
-        }
-
-        .about-page-title {
-            font-size: 1.3rem;
-            margin: 10px 0 20px;
-        }
-
-        .about-text-content p {
-            font-size: 0.95rem;
-            line-height: 1.7;
-            margin-bottom: 16px;
-        }
-    }
-
-    /* Small Mobile */
-    @media (max-width: 400px) {
-        .about-page {
-            padding: 90px 12px 50px;
-        }
-
-        .about-main-image {
-            height: 200px;
-        }
-
-        .about-page-title {
-            font-size: 1.2rem;
-        }
-
-        .about-text-content p {
-            font-size: 0.9rem;
-        }
-    }
-</style>
 {% endblock %}
