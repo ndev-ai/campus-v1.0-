@@ -1035,6 +1035,90 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
+/* Impact Section */
+.impact-section {
+    padding: 80px 32px;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(135deg, #1a2e1a 0%, #2d4a2d 100%);
+}
+
+.impact-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.impact-section .section-tag {
+    background: rgba(132, 204, 22, 0.2);
+    color: #a3e635;
+}
+
+.impact-section .section-title {
+    color: #fff;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.impact-card {
+    text-align: center;
+    padding: 40px 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    border: 1px solid rgba(132, 204, 22, 0.2);
+    transition: all 0.3s ease;
+}
+
+.impact-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(132, 204, 22, 0.4);
+    transform: translateY(-5px);
+}
+
+.impact-number {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #84cc16;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.impact-label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.impact-desc {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.5;
+}
+
+@media (max-width: 968px) {
+    .impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-number {
+        font-size: 2.5rem;
+    }
+}
+
 /* News Section */
 .news-section {
     padding: 80px 32px;
