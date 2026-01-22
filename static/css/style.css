@@ -3712,131 +3712,44 @@ textarea.contact-input {
     margin-top: 16px;
 }
 
-.materials-category {
-    margin-bottom: 48px;
+.materials-list {
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-.category-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 12px;
-    padding-bottom: 12px;
-    border-bottom: 2px solid #2e5b15;
-    display: inline-block;
-}
-
-.category-desc {
-    color: #666;
-    margin-bottom: 24px;
-}
-
-.materials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 24px;
-}
-
-.material-card {
+.material-item {
     display: flex;
     align-items: center;
-    gap: 16px;
+    justify-content: space-between;
+    padding: 20px 24px;
     background: #fff;
-    padding: 20px;
-    border-radius: 16px;
-    border: 1px solid #e5e5e5;
-    transition: all 0.3s ease;
-}
-
-.material-card:hover {
-    border-color: #2e5b15;
-    box-shadow: 0 10px 30px rgba(46, 91, 21, 0.1);
-    transform: translateY(-2px);
-}
-
-.material-icon {
-    width: 56px;
-    height: 56px;
+    border: 1px solid rgba(46, 91, 21, 0.15);
     border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.file-pdf { background: #fef2f2; color: #dc2626; }
-.file-doc { background: #eff6ff; color: #2563eb; }
-.file-xls { background: #f0fdf4; color: #16a34a; }
-.file-ppt { background: #fff7ed; color: #ea580c; }
-.file-zip { background: #f5f3ff; color: #7c3aed; }
-.file-other { background: #f9fafb; color: #6b7280; }
-
-.material-info {
-    flex: 1;
-    min-width: 0;
-}
-
-.material-title {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #1a1a1a;
-    margin-bottom: 4px;
-}
-
-.material-desc {
-    font-size: 0.85rem;
-    color: #666;
-    margin-bottom: 8px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-}
-
-.material-meta {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.file-type-badge {
-    font-size: 0.7rem;
-    font-weight: 600;
-    padding: 4px 8px;
-    border-radius: 4px;
-    text-transform: uppercase;
-}
-
-.badge-pdf { background: #fef2f2; color: #dc2626; }
-.badge-doc { background: #eff6ff; color: #2563eb; }
-.badge-xls { background: #f0fdf4; color: #16a34a; }
-.badge-ppt { background: #fff7ed; color: #ea580c; }
-.badge-zip { background: #f5f3ff; color: #7c3aed; }
-.badge-other { background: #f9fafb; color: #6b7280; }
-
-.file-size {
-    font-size: 0.8rem;
-    color: #999;
-}
-
-.download-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 16px;
-    background: #2e5b15;
-    color: #fff;
-    border-radius: 10px;
+    margin-bottom: 12px;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 0.9rem;
     transition: all 0.3s ease;
-    flex-shrink: 0;
 }
 
-.download-btn:hover {
-    background: #1f3d0f;
+.material-item:hover {
+    border-color: #2e5b15;
+    box-shadow: 0 8px 24px rgba(46, 91, 21, 0.1);
     transform: translateY(-2px);
+}
+
+.material-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1a1a2e;
+}
+
+.download-icon {
+    color: #2e5b15;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.material-item:hover .download-icon {
+    transform: translateY(2px);
 }
 
 .no-materials {
@@ -3863,25 +3776,12 @@ textarea.contact-input {
         font-size: 1rem;
     }
 
-    .materials-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
+    .material-item {
+        padding: 16px 20px;
     }
 
-    .material-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 24px 16px;
-    }
-
-    .material-meta {
-        justify-content: center;
-    }
-
-    .download-btn {
-        width: 100%;
-        justify-content: center;
-        margin-top: 12px;
+    .material-name {
+        font-size: 0.95rem;
     }
 }
 
@@ -3890,18 +3790,8 @@ textarea.contact-input {
         padding: 100px 16px 50px;
     }
 
-    .category-title {
-        font-size: 1.25rem;
-    }
-
-    .material-icon {
-        width: 48px;
-        height: 48px;
-    }
-
-    .material-icon svg {
-        width: 24px;
-        height: 24px;
+    .material-item {
+        padding: 14px 16px;
     }
 }
 

@@ -4,7 +4,7 @@ from programs.models import Program
 from news.models import News
 from events.models import Event
 from partners.models import Partner
-from .models import Material, MaterialCategory
+from .models import Material
 
 
 def home(request):
@@ -45,22 +45,13 @@ def terms(request):
 
 def materials(request):
     """Materials page view with downloadable files"""
-    categories = MaterialCategory.objects.prefetch_related('materials').all()
-    uncategorized_materials = Material.objects.filter(category__isnull=True, is_active=True)
-
-    context = {
-        'categories': categories,
-        'uncategorized_materials': uncategorized_materials,
-    }
-    return render(request, 'materials.html', context)
+    materials = Material.objects.all()
+    return render(request, 'materials.html', {'materials': materials})
 
 
 def download_material(request, pk):
-    """Download a material file and increment counter"""
-    material = get_object_or_404(Material, pk=pk, is_active=True)
-    material.download_count += 1
-    material.save(update_fields=['download_count'])
-
+    """Download a material file"""
+    material = get_object_or_404(Material, pk=pk)
     response = FileResponse(material.file.open('rb'), as_attachment=True)
     response['Content-Disposition'] = f'attachment; filename="{material.file.name.split("/")[-1]}"'
     return response
